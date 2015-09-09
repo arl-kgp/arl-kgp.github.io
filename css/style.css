@@ -32,7 +32,7 @@ padding:0;
           border-radius: 18px; /* Opera 10.5, IE 9, Saf5, Chrome */
 }
 .banner{
-background:url(../images/banner.jpg) no-repeat 0px 0px;
+background:url(../images/cover.jpg) no-repeat 0px 0px;
 min-height:720px;
 background-size:cover;
 }
