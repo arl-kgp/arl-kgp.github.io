@@ -1,11 +1,14 @@
-	<!DOCTYPE html>
-	<html>
-	<head>
+<!DOCTYPE html>
+<html>
+  <head>
 	<title>The Quadrotor Project | IIT Kharagpur</title>
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' /> <!-- Bootstrap -->
 	<script src="js/jquery.min.js"></script> <!-- jQuery -->
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> <!-- Custom Theme files -->
 	<link href="css/ihover.css" rel="stylesheet"> <!-- Circle Hover -->
+	<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />	
+	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -18,7 +21,7 @@
 	<link rel="icon" type="image/png" href="favicon-96x96.png">
 	<script src="js/wow.min.js"></script>
 	<script>
-	 new WOW().init();
+	  new WOW().init();
 	</script>
 	<!--/animated-css-->
 	<!--script-->
@@ -26,185 +29,357 @@
 	<script type="text/javascript" src="js/easing.js"></script>
 	<!--/script-->
 	<script type="text/javascript">
-				jQuery(document).ready(function($) {
-					$(".scroll").click(function(event){		
-						event.preventDefault();
-						$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-					});
-				});
+	  jQuery(document).ready(function($) {
+	  $(".scroll").click(function(event){		
+	  event.preventDefault();
+	  $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+	  });
+	  });
 	</script>
-	</head>
-	<body>
+  </head>
+  <body>
 	<!---->
 	<div class="banner">
-		 <div class="container">
-			 <div class="header">	 
-				 <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
-				 <a href="index.html"><img src="images/ark.png" alt="" height="100px" width="100px"/></a>
-				 </div>	
-				 <div class="top-menu">
-					 <span class="menu"> </span> 
-					 <ul>
-						 <li><a class="scroll" href="#home">HOME</a></li>
-						 <li><a class="scroll" href="#overview">OVERVIEW</a></li>
-						 <li><a class="scroll" href="#description">DESCRIPTION</a></li>
-						 <li><a class="scroll" href="#timeline">TIMELINE</a></li>
-						 <li><a class="scroll" href="#team">TEAM</a></li>
-						 <li><a class="scroll" href="#joinus">JOIN US</a></li>
-					 </ul>
-				 </div>
-				 <div class="clearfix"> </div>
-				 </div>
-				 <!-- script-for-menu -->
-			 <script>					
-						$("span.menu").click(function(){
-							$(".top-menu ul").slideToggle("slow" , function(){
-							});
-						});
-			 </script>
-			 		 <div id="home" class="box_round banner-text wow fadeInUp"  style="background-color:rgba(0, 0, 0, 0.52)" data-wow-delay="0.5s">
-					   <h1>Aerial Robotics Kharagpur <br>
-					   <span>ARK</span></h1>
-				 <h2>We are a group of enthusiastic group of students working towards building autonomous aerial vehicles, based at Indian Institute of Technology Kharagpur.</h2>
-			 </div>
+	  <div class="container">
+		<div class="header">	 
+		  <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
+			<a href="index.html"><img src="images/ark.png" alt="" height="100px" width="100px"/></a>
+		  </div>	
+		  <div class="top-menu">
+			<span class="menu"> </span> 
+			<ul>
+			  <li><a class="scroll" href="#home">HOME</a></li>
+			  <li><a class="scroll" href="#overview">OVERVIEW</a></li>
+			  <li><a class="scroll" href="#description">DESCRIPTION</a></li>
+			  <li><a class="scroll" href="#timeline">TIMELINE</a></li>
+			  <li><a class="scroll" href="#team">TEAM</a></li>
+			  <li><a class="scroll" href="#joinus">JOIN US</a></li>
+			</ul>
+		  </div>
+		  <div class="clearfix"> </div>
 		</div>
+		<!-- script-for-menu -->
+		<script>					
+		  $("span.menu").click(function(){
+		  $(".top-menu ul").slideToggle("slow" , function(){
+		  });
+		  });
+		</script>
+		<div id="home" class="box_round banner-text wow fadeInUp"  style="background-color:rgba(0, 0, 0, 0.52)" data-wow-delay="0.5s">
+		  <h1>Aerial Robotics Kharagpur <br>
+			<span>ARK</span></h1>
+		  <h2>We are a group of enthusiastic group of students working towards building autonomous aerial vehicles, based at Indian Institute of Technology Kharagpur.</h2>
+		</div>
+	  </div>
 	</div>
 	<div id="overview" class="brief">
-		 <div class="container">
-		 	<h4>OVERVIEW</h4>
-			 <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
-			 <center><img src="images/browse.jpg" alt="" style="border-radius: 12%"/></center>
-				 <div class="brief-grid">
-					 <div class="brief-grid-text">
-						 <center><h3>Autonomous Flying Vehicles</h3></center>
-						 <p>We aim to move the state-of-the-art in aerial robotics forward. Our drones, when ready, would be capable of autonomous flight, localization in GPS denied environments, tracking and interacting with mobile ground robots as well as other drones, and much more!</p>
-					 </div>
-				 </div>
-			 </div>
-			 <div class="col-md-6 brief-grids wow fadeInRight" data-wow-delay="0.5s">
-				 <a href="http://www.aerialroboticscompetition.org/" target="_blank"><center><img src="images/browse2.png" alt="" style="border-radius: 12%"/></center></a>
-				 <div class="brief-grid">
-					 <div class="brief-grid-text">
-					   <center><h3>International Aerial Robotics Competition</h3></center>
-						 <p>IARC is the longest running collegiate aerial robotics challenge in the world. Entering its third decade, the competition continues to tackle challenges that are currently impossible for any flying robots owned by government or industry. We aim to participate in its next iteration.</p>
-					 </div>
-				 </div>
-			 </div>
-			 <div class="clearfix"> </div>		 
-		 </div>
+	  <div class="container">
+		<h4>OVERVIEW</h4>
+		<div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
+		  <center><img src="images/browse.jpg" alt="" style="border-radius: 12%"/></center>
+		  <div class="brief-grid">
+			<div class="brief-grid-text">
+			  <center><h3>Autonomous Flying Vehicles</h3></center>
+			  <p>We aim to move the state-of-the-art in aerial robotics forward. Our drones, when ready, would be capable of autonomous flight, localization in GPS denied environments, tracking and interacting with mobile ground robots as well as other drones, and much more!</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-6 brief-grids wow fadeInRight" data-wow-delay="0.5s">
+		  <a href="http://www.aerialroboticscompetition.org/" target="_blank"><center><img src="images/browse2.png" alt="" style="border-radius: 12%"/></center></a>
+		  <div class="brief-grid">
+			<div class="brief-grid-text">
+			  <center><h3>International Aerial Robotics Competition</h3></center>
+			  <p>IARC is the longest running collegiate aerial robotics challenge in the world. Entering its third decade, the competition continues to tackle challenges that are currently impossible for any flying robots owned by government or industry. We aim to participate in its next iteration.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="clearfix"> </div>		 
+	  </div>
 	</div>
 	<!---->
 	<div id="description" class="brief">
 	  <div class="container">
 		<div class="feature-text text-center">
 		  <h3>PROJECT DESCRIPTION</h3>
-<p>
-		  
+		  <p>
+			
 		</div>
 	  </div>
 	</div>
 	
 	<div id="timeline" class="features">
-		 <div class="container">
-			 <div class="feature-text text-center">
-				 <h3>TIMELINE</h3>
-				 <p>From Inception to Production.</p>
-			 </div>
-			 <iframe src='https://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=17GkwckjXf9-SOHWS-RTAXMs0ZKNH2kkr-cO_gQnfGOE&font=Bevan-PotanoSans&maptype=toner&lang=en&start_at_slide=4&height=650' width='100%' height='650' frameborder='0'></iframe>
-		 </div>
+	  <div class="container">
+		<div class="feature-text text-center">
+		  <h3>TIMELINE</h3>
+		  
+		</div>
+		<iframe src='https://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=17GkwckjXf9-SOHWS-RTAXMs0ZKNH2kkr-cO_gQnfGOE&font=Bevan-PotanoSans&maptype=toner&lang=en&start_at_slide=4&height=650' width='100%' height='650' frameborder='0'></iframe>
+	  </div>
 	</div>
-	<div id="team" class="video">
-		 <div class="container">
-			 <div class="video-text text-center">
-				 <h3>Team</h3>
-				<p>Our team comes from a multitude of backgrounds, and contributes to software, controls and administration.</p>
-			 </div>
-			 <div class="video-play ">
-				<!-- Scale down-->
-				<div class="row">
-				  <div class="col-sm-4">
-				 
-				    <div class="ih-item circle colored effect6 scale_up"><a href="#">
-				        <div class="img"><img src="images/genface.jpg" alt="img"></div>
-				        <div class="info">
-				          <h3>Aditya Agarwal</h3>
-				          <p>Description goes here</p>
-				        </div></a></div>
-				 </div>
-				 <div class="col-sm-4">
-				 
-				    <div class="ih-item circle colored effect6 scale_up"><a href="#">
-				        <div class="img"><img src="images/genface.jpg" alt="img"></div>
-				        <div class="info">
-				          <h3>Soumyadeep Mukherjee</h3>
-				          <p>Description goes here</p>
-				        </div></a></div>
-				 </div>
-				 <div class="col-sm-4">
-				 
-				    <div class="ih-item circle colored effect6 scale_up"><a href="#">
-				        <div class="img"><img src="images/genface.jpg" alt="img"></div>
-				        <div class="info">
-				          <h3>Mrinal Mohit</h3>
-				          <p>Description goes here</p>
-				        </div></a></div>
-				 </div>
-				</div>
-				<!-- end Scale down-->		 
-			 </div>
-		 </div>
-	</div>
-	<div id="joinus" class="contact">
-		 <div class="container">
-			 <div class="contact-text text-center">
-				 <h3>Join Us</h3>
-				<p>If you are interested in our project and want to join!</p>
-			 </div>
-			  <div class="contact-form">
-					<form action="http://formspree.io/abhinavjain241@gmail.com" method="POST">
-						<div class="col-md-6 text-box">
-							<input class="wow fadeInLeft" data-wow-delay="0.5s" type="text" placeholder="Name" />
-							<input class="wow fadeInLeft" data-wow-delay="0.5s" type="text" placeholder="Email" />
-							<input class="wow fadeInLeft" data-wow-delay="0.5s" type="text" placeholder="Phone" />
-					    </div>
-						 <div class="col-md-6 textarea">
-								<textarea class="wow fadeInRight" data-wow-delay="0.5s" placeholder="Message"></textarea>
-								<input class="wow fadeInRight" data-wow-delay="0.5s" type="submit" value="SUBMIT" />
-						  </div>
-						  <div class="clearfix"> </div>					  
-				  </form>
+	<!-- section works -->
+	<div id="team" class="features">
+	  <div class="container">
+		
+		<div class="container">
+		  <div class="feature-text text-center">
+			<h3>TEAM</h3>
+			
+		  </div>
+		</div>
+		
+		<div class="row">
+		  <nav id="filter" class="col-md-12 text-center">
+			<ul>
+			  <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
+			  <li><a href="#"  class="btn-theme btn-small" data-filter=".controls" >Controls</a></li>
+			  <li><a href="#"  class="btn-theme btn-small" data-filter=".software">Software</a></li>
+			  <li><a href="#" class="btn-theme btn-small" data-filter=".alum">Alumni</a></li>
+			</ul>
+		  </nav>
+		  <div class="col-md-12">
+			<div class="row">
+			  <div class="portfolio-items isotopeWrapper clearfix" id="4">
+
+				<article class="col-md-2 isotopeItem alum">
+				  <div class="team-member" align="center">
+					<figure class="member-photo"><img src="images/pp.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Aditya Agarwal</h4>
+					  <span>Founder, Alumnus</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem alum">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/mrinal.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Mrinal Mohit</h4>
+					  <span>Founder, Alumnus</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem software">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/soumyadeep.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Soumyadeep Mukherjee</h4>
+					  <span>Team Head</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem software">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/ankush.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Sairam K</h4>
+					  <span>Head, Software Team</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem controls">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/rishal.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Rishal Raj</h4>
+					  <span>Head, Controls Team</span>
+					</div>
+				  </div>
+				</article>			
+
+				<article class="col-md-2 isotopeItem software">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/kk.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Kumar Krishna Agrawal</h4>
+					  <span>Head, Software Team</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem controls">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/vishnu.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Vishnu Sharma</h4>
+					  <span>Head, Controls Team</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem alum">
+				  <div class="team-member" align="center">
+					<figure class="member-photo"><img src="images/jit.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Jit Ray Chowdhury</h4>
+					  <span>Mentor, Alumnus</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem alum">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/prasann.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Prasann Jain</h4>
+					  <span>Alumnus, Controls Team</span>
+					</div>
+				  </div>
+				</article>
+				
+				<article class="col-md-2 isotopeItem alum">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/keshav.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Keshav Sarraf</h4>
+					  <span>Alumnus, Controls Team</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem software">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/ankush.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Ankush Chatterjee</h4>
+					  <span>Member, Software Team</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem software">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/manash.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Manash Pratim Das</h4>
+					  <span>Member, Software Team</span>
+					</div>
+				  </div>
+				</article>
+
+
+				<article class="col-md-2 isotopeItem controls">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/adarsh.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Adarsh Kosta</h4>
+					  <span>Member, COntrols Team</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem controls">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/sakshi.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Sakshi Agarwal</h4>
+					  <span>Member, Controls Team</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem software">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/adityag.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Aditya Goenka</h4>
+					  <span>Member, Software Team</span>
+					</div>
+				  </div>
+				</article>
+
+				<article class="col-md-2 isotopeItem controls">
+				  <div class="team-member align-center">
+					<figure class="member-photo"><img src="images/shashwat.jpg" alt="" /></figure>
+					<div class="team-detail">
+					  <h4>Shashwat Gupta</h4>
+					  <span>Member, Controls Team</span>
+					</div>
+				  </div>
+				</article>
+
+
+
 			  </div>
-		 </div>	  
+			  
+
+			</div>
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>  
+	<div id="joinus" class="contact">
+	  <div class="container">
+		<div class="contact-text text-center">
+		  <h3>Join Us</h3>
+		  <p>If you are interested in our project and want to join!</p>
+		</div>
+		<div class="contact-form">
+		  <form action="http://formspree.io/abhinavjain241@gmail.com" method="POST">
+			<div class="col-md-6 text-box">
+			  <input class="wow fadeInLeft" data-wow-delay="0.5s" type="text" placeholder="Name" />
+			  <input class="wow fadeInLeft" data-wow-delay="0.5s" type="text" placeholder="Email" />
+			  <input class="wow fadeInLeft" data-wow-delay="0.5s" type="text" placeholder="Phone" />
+			</div>
+			<div class="col-md-6 textarea">
+			  <textarea class="wow fadeInRight" data-wow-delay="0.5s" placeholder="Message"></textarea>
+			  <input class="wow fadeInRight" data-wow-delay="0.5s" type="submit" value="SUBMIT" />
+			</div>
+			<div class="clearfix"> </div>					  
+		  </form>
+		</div>
+	  </div>	  
 	</div>
 	<!--map-->
 	<div class="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.930580990306!2d87.302205!3d22.318465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d44075b4f03ad%3A0xfa4598ca483aabbe!2sTechnology+Students&#39;+Gymkhana!5e0!3m2!1sen!2sin!4v1433697505093"></iframe>
+	  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.930580990306!2d87.302205!3d22.318465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d44075b4f03ad%3A0xfa4598ca483aabbe!2sTechnology+Students&#39;+Gymkhana!5e0!3m2!1sen!2sin!4v1433697505093"></iframe>
 	</div>
 	<!--/map-->
 	<!---->
 	<div class="footer">
-		 <div class="container">
-			 <div class="ftr-logo">
-				 <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="images/ark.png" alt="" height="100px" width="100px"/></a>
-			 </div>
+	  <div class="container">
+		<div class="ftr-logo">
+		  <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="images/ark.png" alt="" height="100px" width="100px"/></a>
+		</div>
 
-		 </div>
+	  </div>
 	</div>
 	<!---->
 	<script type="text/javascript">
-			$(document).ready(function() {
-					/*
-					var defaults = {
-					containerID: 'toTop', // fading element id
-					containerHoverID: 'toTopHover', // fading element hover id
-					scrollSpeed: 1200,
-					easingType: 'linear' 
-					};
-					*/
-			$().UItoTop({ easingType: 'easeOutQuart' });
-	});
+	  $(document).ready(function() {
+	  /*
+	  var defaults = {
+	  containerID: 'toTop', // fading element id
+	  containerHoverID: 'toTopHover', // fading element hover id
+	  scrollSpeed: 1200,
+	  easingType: 'linear' 
+	  };
+	  */
+	  $().UItoTop({ easingType: 'easeOutQuart' });
+	  });
 	</script>
+	
 	<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-	<!----> 
-	 </body>
-	 </html>
+	
+	<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxmZwaoJo3TW82HylIR2kmVCLCPp7IDV4&sensor=false"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="js/skrollr.min.js"></script>		
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="js/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/validate.js"></script>
+    <script src="js/main.js"></script>
+	
+  </body>
+</html>
