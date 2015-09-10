@@ -102,10 +102,117 @@
 	<div id="description" class="brief">
 	  <div class="container">
 		<div class="feature-text text-center">
-		  <h3>PROJECT DESCRIPTION</h3>
-		  <p>
-			
+		  <h3>PROJECT DESCRIPTION</h3>	
 		</div>
+		  <ul class="nav nav-pills">
+	<li class="active"><a data-toggle="tab" href="#overall">Overall</a></li>
+	<li><a data-toggle="tab" href="#software">Software Team</a></li>
+    <li><a data-toggle="tab" href="#controls">Controls Team</a></li>
+		  </ul>
+		  <div class="tab-content">
+  			<div id="overall" class="tab-pane fade in active">
+	  		  <div class="body-description">
+				<p>ARK aims to develop a flexible aerial robotics framework which can be easily used to control aerial robots. Eventually, we would want to move to multiple decentralised aerial robots in outdoors.
+				Currently, we have designed a simple architecture for IARC which we plan to optimise to it's best extent for participation.
+				</p>
+				
+				<center><img src="images/desc/archi.png" height=350></center>
+				
+			  </div>
+			</div>
+		  </div>
+		  
+  <div class="tab-content">
+  	<div id="software" class="tab-pane fade in">
+	  	<div class="body-description">
+	  	The software team is responsible for developing algorithms on computer vision which include localisation, object detection adn tracking, Path Planning and 3D obstacle avoidance along with Artifical Intelligence algorithms for exploration and herding.
+		Current Areas of focus are:
+		</div>
+	  <br>
+	  <ul class="nav nav-pills">
+	    <li class="active"><a data-toggle="pill" href="#object">Object Detection and Tracking</a></li>
+	    <li><a data-toggle="pill" href="#ground">Ground Value Setup</a></li>
+	    <li><a data-toggle="pill" href="#grid">Grid Based Localisation</a></li>
+	    <li><a data-toggle="pill" href="#flow">Optical Flow Localisation</a></li>
+		<li><a data-toggle="pill" href="#herd">Herding Simulation</a></li>
+		<li><a data-toggle="pill" href="#simu">Simulation Platform on Gazebo</a></li>
+		
+	  </ul>
+	  <br>
+	  <div class="tab-content">
+	    <div id="object" class="tab-pane fade in active body-description">
+		      <h5><b>Object Detection and Tracking</b></h5>
+		      <p>
+				Object detection and tracking is a widely used topic with applications in surveillance. In IARC, the problem statement requires us to take ground robots towards a line for which we plan to use fisheye lens over teh camera so that we can see the whole arena and then detect the iRobot Creates and track them maintaining the trackers even when they are out of field of view. We are using Kalman filter for the tracking on the linear model of motion of the ground robots as described in IARC rules. 
+			  </p>
+	    <img src="images/">
+	    </div>
+	    <div id="ground" class="tab-pane fade body-description">
+		      <h5><b>Ground Value Setup</b></h5>
+		      <p>A true value of the robots position and orientation is a necessary metric to compare our algorithms of self estimation, detection and tracking. So, we are using two HD Web cameras fixed on the arena frame to get the depth of the desired object which will be then transformed into a global coordinate system of the arena.</p>
+	    <img src="images/desc/">
+	    </div>
+	    <div id="grid" class="tab-pane fade body-description">
+		      <h5><b>Grid Based Localisation</b></h5>
+		      <p>IARC is held in an indoor GPS denied environment so localisation is a major challenge. IARC provides grids on the ground which can be detected and used to localize.</p>
+	   <img src="img/desc/mapp.jpg" height=450>
+	    </div>
+    <div id="flow" class="tab-pane fade body-description">
+      <h5><b>Optical Flow Localisation</b></h5>
+      <p>Optical flow or optic flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer (an eye or a camera) and the scene.Optical Flow sensors or from optical flow from images, a path and trajectory of motion can be generated of the robot which is one of the most widely used ways of localisation in GPS denied environment.</p>
+<img src="img/desc/locodom.jpg" height=450>
+    </div>
+    <div id="herd" class="tab-pane fade body-description">
+      <h5><b>Herding</b></h5>
+      <p>IARC has an interesting AI aspect in it's problem statement which is to herd robots past the green line and avoid them crossing the red line. This brings an additional constraint of taretting the robots moving towards red line first and optimising the attack behavior so that maximum robots can be herded across the line.</p>
+<img src="img/desc/locodom.jpg" height=450>
+    </div>
+
+		
+	    <div id="simu" class="tab-pane fade body-description">
+		      <h5><b>Simulation on Gazebo</b></h5>
+		      <p> Aerial Robots are inherently difficult to control and testing on real robots is not always feasible. Hence, a simulation platform on Gazebo which uses the Quad model and physics and also simulates sensor noise and environment is an important step.</p>
+	    <img src="images/desc/g" height=450>
+	    </div>
+	  </div>
+  	</div>
+	<div id="controls" class="tab-pane fade in">
+		<div class="body-description">
+	  	The Controls Team aims towards a smooth motion of the aerial robot in space and that they attain the desired speed and orientation avoiding obstacles. Current research includes:
+	  </div>
+ 	<br>
+    <ul class="nav nav-pills">
+      <li class="active"><a data-toggle="pill" href="#pid">Two Layered PID</a></li>
+      <li><a data-toggle="pill" href="#low">Low Level Controller</a></li>
+      <li><a data-toggle="pill" href="#self">Self Estimation</a></li>
+      <li><a data-toggle="pill" href="#path">Path Planner</a></li>
+  </ul>
+  <br>
+  <div class="tab-content">
+    <div id="pid" class="tab-pane fade in active body-description">
+      <h5><b>Two Layered PID</b></h5>
+      <p>An aerial robot can control it's position in the form of roll. pitch and yaw but in the world frame, It gets an input or feed back in the form of X,Y and Z. So, a cascaded PID with self adjusting gains and parameters is the direction towards which we are working. We have got a naive PID over RPY and XYZ working on AR Drone and are working to shift to self-adjusting parameters.</p>
+<img src="img/desc/relpose.jpg" height=450>
+    </div>
+    <div id="low" class="tab-pane fade body-description">
+      <h5><b>Low Level Controller</b></h5>
+      <p>Low Leve Controller includes the embeeded system on teh robot end where commands from the high level controller and processed and converted into Motor Commands. We have developed a MATLAB SImulink model for our own chassis and working on that to develop on of our controller. Also, we are trying to get Telekyb Near Hover Controller from Max Planck Institute of Biological Cybernetics to run on our own boards which control the motors. </p>
+<img src="img/desc/comm.jpg" height=450>
+    </div>
+    <div id="self" class="tab-pane fade body-description">
+      <h5><b>Self Estimation</b></h5>
+      <p>A robot should know where is it. Knowing the location of teh robot in the world using onboard sensors is a major challenge in robotics. We are using IMU data along with vision information and SONAR sensors to fuse teh information and get an estimate of our own position. We are constantly trying to improve this by comparing it with our true value setup and move the state of the art ahead.</p>
+<img src="img/desc/locodom.jpg" height=450>
+    </div>
+    <div id="path" class="tab-pane fade body-description">
+      <h5><b>Path Planner</b></h5>
+      <p>The robots in order to perform some tasks needs to move from one place to another. During it's course of motion, it may deviate and the information from estimator and vision is noisy. Moroever, in order to fulfill the IARC problem statement, we need a time depndent trajectory generated and followed to optimally reach a ground robot and perform any action on it.
+		</p>
+<img src="img/desc/locodom.jpg" height=450>
+    </div>
+	
+  </div>
+  	</div>
 	  </div>
 	</div>
 	
