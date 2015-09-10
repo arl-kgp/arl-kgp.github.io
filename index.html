@@ -145,12 +145,12 @@
 				<p>
 				  Object detection and tracking is a widely used topic with applications in surveillance. In IARC, the problem statement requires us to take ground robots towards a line for which we plan to use fisheye lens over teh camera so that we can see the whole arena and then detect the iRobot Creates and track them maintaining the trackers even when they are out of field of view. We are using Kalman filter for the tracking on the linear model of motion of the ground robots as described in IARC rules. 
 				</p><br>
-				<center><img src="images/"></center>
+				<center><img src="images/desc/kalman.jpg" height=450></center>
 			  </div>
 			  <div id="ground" class="tab-pane fade body-description">
 				<h5><b>Ground Value Setup</b></h5>
 				<p>A true value of the robots position and orientation is a necessary metric to compare our algorithms of self estimation, detection and tracking. So, we are using two HD Web cameras fixed on the arena frame to get the depth of the desired object which will be then transformed into a global coordinate system of the arena.</p><br>
-				<center><img src="images/desc/"></center>
+				<center><img src="images/desc/depth.png" height=450></center>
 			  </div>
 			  <div id="grid" class="tab-pane fade body-description">
 				<h5><b>Grid Based Localisation</b></h5>
@@ -165,13 +165,13 @@
 			  <div id="herd" class="tab-pane fade body-description">
 				<h5><b>Herding</b></h5>
 				<p>IARC has an interesting AI aspect in it's problem statement which is to herd robots past the green line and avoid them crossing the red line. This brings an additional constraint of taretting the robots moving towards red line first and optimising the attack behavior so that maximum robots can be herded across the line.</p><br>
-				<center><img src="images/desc/locodom.jpg" height=450></center>
+				<center><img src="images/desc/herd.jpg" height=450></center>
 			  </div>
 			  
 			  <div id="simu" class="tab-pane fade body-description">
 				<h5><b>Simulation on Gazebo</b></h5>
 				<p> Aerial Robots are inherently difficult to control and testing on real robots is not always feasible. Hence, a simulation platform on Gazebo which uses the Quad model and physics and also simulates sensor noise and environment is an important step.</p><br>
-				<center><img src="images/desc/g" height=450></center>
+				<center><img src="images/desc/Quad_simulator.png" height=450></center>
 			  </div>
 			</div>
   		  </div>
