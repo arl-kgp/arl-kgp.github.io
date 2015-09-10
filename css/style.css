@@ -2808,7 +2808,7 @@ nav#filter a {
 }
 
 
-.portfolio-items article img {width:100%;} 
+.portfolio-items article img {width:150px; height:150px} 
 
 .portfolio-item {
 	display: block;
@@ -2913,13 +2913,13 @@ About
 	box-sizing:border-box;
 	-webkit-border-radius:50%;
 		-moz-border-radius:50%;
-			border-radius:50%;	
+			border-radius:10%;	
 	margin: 0 0 20px 0;
 }
 .member-photo img {
 	-webkit-border-radius:50%;
 		-moz-border-radius:50%;
-			border-radius:50%;	
+			border-radius:10%;	
 }
 
 .team-detail h4 {
