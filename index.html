@@ -69,8 +69,8 @@
 		<div id="home" class="box_round banner-text wow fadeInUp"  style="background-color:rgba(0, 0, 0, 0.52)" data-wow-delay="0.5s">
 		  <h1>Aerial Robotics Kharagpur <br>
 			<span>ARK</span></h1>
-		  <h2>We are enthusiastic group of students working towards building autonomous aerial vehicles, based at Indian Institute of Technology Kharagpur.</h2>
-		  <h2> We are advised by <a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=abmYX">Prof. Jayanta Mukhopadhyay</a> of the Department of Computer Science and Engineering and <span><a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=bUmdQ">Prof. D.K Pratihar</a></span> of the Department of Mechanical Engineering and are funded by the <a href="http://www.ttg-sric.iitkgp.ernet.in/sric/">Sponsored Research and Industrial Consultancy</a> group of IIT Kharagpur. <br>The principal investigator for this project is <a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=aVmWZ">Prof. Somesh Kumar</a>, President, Technology Students' Gymkhana</h2>
+		  <h2>We are an enthusiastic group of students working towards building autonomous aerial vehicles, based at Indian Institute of Technology Kharagpur.</h2>
+		  <h2> We are advised by <a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=abmYX">Prof. Jayanta Mukhopadhyay</a> of the Department of Computer Science and Engineering and <span><a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=bUmdQ">Prof. D.K Pratihar</a></span> of the Department of Mechanical Engineering and are funded by the <a href="http://www.ttg-sric.iitkgp.ernet.in/sric/">Sponsored Research and Industrial Consultancy</a> facility of IIT Kharagpur. <br>The principal investigator for this project is <a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=aVmWZ">Prof. Somesh Kumar</a>, President, Technology Students' Gymkhana</h2>
 		</div>
 	  </div>
 	</div>
@@ -113,8 +113,8 @@
 		<div class="tab-content">
   		  <div id="overall" class="tab-pane fade in active">
 	  		<div class="body-description">
-			  <p>ARK aims to develop a flexible aerial robotics framework which can be easily used to control aerial robots. Eventually, we would want to move to multiple decentralised aerial robots in outdoors.
-				Currently, we have designed a simple architecture for IARC which we plan to optimise to it's best extent for participation.
+			  <p>ARK aims to develop a flexible aerial robotics framework which can be easily used to control aerial vehicles. Eventually, we want to move to multiple decentralised aerial robot swarms in an outdoors setting.
+				Currently, we have designed an architecture for IARC which we plan to optimise iteratively for participation.
 			  </p>
 			  
 			  <center><img src="images/desc/archi.png" height=350></center>
@@ -126,13 +126,13 @@
 		<div class="tab-content">
   		  <div id="software" class="tab-pane fade in">
 	  		<div class="body-description">
-	  		  The software team is responsible for developing algorithms on computer vision which include localisation, object detection adn tracking, Path Planning and 3D obstacle avoidance along with Artifical Intelligence algorithms for exploration and herding.
+	  		  The software team is responsible for developing algorithms in computer vision including localisation, object detection, tracking, path planning and 3D obstacle avoidance along with artifical intelligence algorithms for exploration and herding.
 			  Current Areas of focus are:
 			</div>
 			<br>
 			<ul class="nav nav-pills">
 			  <li class="active"><a data-toggle="pill" href="#object">Object Detection and Tracking</a></li>
-			  <li><a data-toggle="pill" href="#ground">Ground Value Setup</a></li>
+			  <li><a data-toggle="pill" href="#ground">Ground Truth Validation</a></li>
 			  <li><a data-toggle="pill" href="#grid">Grid Based Localisation</a></li>
 			  <li><a data-toggle="pill" href="#flow">Optical Flow Localisation</a></li>
 			  <li><a data-toggle="pill" href="#herd">Herding Simulation</a></li>
@@ -144,13 +144,13 @@
 			  <div id="object" class="tab-pane fade in active body-description">
 				<h5><b>Object Detection and Tracking</b></h5>
 				<p>
-				  Object detection and tracking is a widely used topic with applications in surveillance. In IARC, the problem statement requires us to take ground robots towards a line for which we plan to use fisheye lens over teh camera so that we can see the whole arena and then detect the iRobot Creates and track them maintaining the trackers even when they are out of field of view. We are using Kalman filter for the tracking on the linear model of motion of the ground robots as described in IARC rules. 
+				  Object detection and tracking is widely used with applications in monitoring and surveillance. In IARC, the task requires us to guide ground robots towards a line. We plan to use a fisheye lens to see the whole arena and then track the ground robots, maintaining the trackers even when they are out of field of view. We are using Kalman filter for the tracking on the linear model of motion of the ground robots. 
 				</p><br>
 				<center><img src="images/desc/kalman.jpg" height=450></center>
 			  </div>
 			  <div id="ground" class="tab-pane fade body-description">
-				<h5><b>Ground Value Setup</b></h5>
-				<p>A true value of the robots position and orientation is a necessary metric to compare our algorithms of self estimation, detection and tracking. So, we are using two HD Web cameras fixed on the arena frame to get the depth of the desired object which will be then transformed into a global coordinate system of the arena.</p><br>
+				<h5><b>Ground Truth Validation</b></h5>
+				<p>A true value of the robots position and orientation is a necessary metric to compare our algorithms of self estimation, detection and tracking. We are using two high-definition cameras fixed on the arena frame to get the depth of the desired object which will then be transformed into a global coordinate system of the arena.</p><br>
 				<center><img src="images/desc/depth.png" height=450></center>
 			  </div>
 			  <div id="grid" class="tab-pane fade body-description">
@@ -160,7 +160,7 @@
 			  </div>
 			  <div id="flow" class="tab-pane fade body-description">
 				<h5><b>Optical Flow Localisation</b></h5>
-				<p>Optical flow or optic flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer (an eye or a camera) and the scene.Optical Flow sensors or from optical flow from images, a path and trajectory of motion can be generated of the robot which is one of the most widely used ways of localisation in GPS denied environment.</p><br>
+				<p>Optical flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer (an eye or a camera) and the scene. From the optical flow of a video feed, a path and trajectory of robot motion can be inversely computed, which is one of the most widely used ways of localisation in GPS denied environment.</p><br>
 				<center><img src="images/desc/flow.jpg" height=450></center>
 			  </div>
 			  <div id="herd" class="tab-pane fade body-description">
@@ -196,12 +196,12 @@
 			  </div>
 			  <div id="low" class="tab-pane fade body-description">
 				<h5><b>Low Level Controller</b></h5>
-				<p>Low Leve Controller includes the embeeded system on teh robot end where commands from the high level controller and processed and converted into Motor Commands. We have developed a MATLAB SImulink model for our own chassis and working on that to develop on of our controller. Also, we are trying to get Telekyb Near Hover Controller from Max Planck Institute of Biological Cybernetics to run on our own boards which control the motors. </p><br>
+				<p>Low Level Controller includes the embedded system on the robot end where commands from the high level controller and processed and converted into Motor Commands. We have developed a MATLAB Simulink model for our own chassis and working on that to develop on of our controller. Also, we are trying to get Telekyb Near Hover Controller from Max Planck Institute of Biological Cybernetics to run on our own boards which control the motors. </p><br>
 				<center><img src="images/desc/low.jpg" height=450></center>
 			  </div>
 			  <div id="self" class="tab-pane fade body-description">
 				<h5><b>Self Estimation</b></h5>
-				<p>A robot should know where is it. Knowing the location of teh robot in the world using onboard sensors is a major challenge in robotics. We are using IMU data along with vision information and SONAR sensors to fuse teh information and get an estimate of our own position. We are constantly trying to improve this by comparing it with our true value setup and move the state of the art ahead.</p><br>
+				<p>A robot should know where is it. Knowing the location of the robot in the world using onboard sensors is a major challenge in robotics. We are using IMU data along with vision information and SONAR sensors to fuse the information and get an estimate of our own position. We are constantly trying to improve this by comparing it with our true value setup and move the state of the art ahead.</p><br>
 				<center><img src="images/desc/self.jpg" height=450></center>
 			  </div>
 			  <div id="path" class="tab-pane fade body-description">
