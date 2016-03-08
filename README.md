@@ -6,9 +6,9 @@
 ```html
     <article class="col-md-2 isotopeItem <Team>">
 	<div class="team-member" align="center">
-		<figure class="member-photo"><img src="img/team/<File name>.jpg" alt="" /></figure>
+		<figure class="member-photo"><img src="images/<File name>.jpg" alt="" /></figure>
 		<div class="team-detail">
-			<h4><Name of the member></h4>
+			<h3><Name of the member></h3>
 			<span><Job Profile></span>					
 		</div>
 	</div>
