@@ -1,29 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-	<title>{{ page.title }}</title>
-	<!-- link to main stylesheet -->
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Aerial Robotics Kharagpur</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33209012-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+
+     </script>
   </head>
   <body>
-	<nav>
-	  <ul>
-		<li><a href="/">Home</a></li>
-		<li><a href="/about">About</a></li>
-		<li><a href="/cv">CV</a></li>
-		<li><a href="/blog">Blog</a></li>
-	  </ul>
-	</nav>
-	<div class="container">
-
-	  {{ content }}
-
-	</div><!-- /.container -->
-	<footer>
-	  <ul>
-		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-	  </ul>
-	</footer>
+    <div class="wrapper">
+      <header>
+        <h1>May the thrust be with you!</h1>
+        <p></p>
+        <p>We are ARK,<a
+          href="http://quadrotor-iitkgp.github.io">Aerial Robotics Kharagpur</a>, a
+          research group at Indian Institute of Technolog Kharagpur. <br>
+		  We build aerial robots as a hobby, for research, for fun and plan to build an army to conquor Mars in the next few days.
+	<br>
+	We blog about our hacks, research, projects and experiences as our birds (drones) travel different galaxies.</p>
+        <a href="/">Blog Home</a><br/>
+        <a href="https://github.com/quadrotor-IITKgp">Github</a><br/>
+        <a href="http://quadrotor-iitkgp.github.io">About</a><br/>
+      </header>
+      <section>
+        {{ content }}
+      </section>
+      <footer>
+        <p>
+        <ul>
+          <li><a href="http://twitter.com/ark">Twitter</a></li>
+          <li><a href="https://www.facebook.com/aerialroboticskgp">Facebook</a></li>
+        </ul>
+        </p>
+        <p><small>This blog is powered by <a href="http://github.com/mojombo/jekyll">jekyll</a>.</small></p>
+        <p>&copy 2016 Aerial Robotics Kharagpur.
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
   </body>
-  </html>
+</html>

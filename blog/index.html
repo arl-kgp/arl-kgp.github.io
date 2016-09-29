@@ -1,11 +1,16 @@
 ---
 layout: default
-title: Hank Quinlan's Blog
+title: Aerial Robotics Kharagpur
 ---
-<h1>{{ page.title }}</h1>
-<ul class="posts">
 
-  {% for post in site.posts %}
-  <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<div id="home">
+  <!--<h1>Blog Posts</h1> -->
+  <div class="posts">
+    {% for post in site.posts reverse limit: 5 %}
+    <div class="post_info">
+      {{ post.content | replace: "more start -->","" | replace: "<!-- more end","" }}
+      <p><a href="{{ post.url }}">Continue Reading...</a></p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
