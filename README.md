@@ -21,3 +21,7 @@
 1. Update [this](https://docs.google.com/spreadsheets/d/17GkwckjXf9-SOHWS-RTAXMs0ZKNH2kkr-cO_gQnfGOE/edit#gid=0) sheet.
 2. Follow Instructions in [this](http://timeline.knightlab.com/) link and copy the code snippet.
 3. Replace existing code snippet.
+
+### Google Analytics
+
+Check google analytics dashboard [here](https://analytics.google.com/analytics/web/#dashboard).
