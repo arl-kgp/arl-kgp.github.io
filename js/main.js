@@ -1,138 +1,270 @@
-(function ($) {
-
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 100) {
-			$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-		});
-		$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 1000);
-				return false;
-		});
-	
-	// local scroll
-	jQuery('.navbar').localScroll({hash:true, offset: {top: 0},duration: 800, easing:'easeInOutExpo'});
-
-	
-	// portfolio
-    if($('.isotopeWrapper').length){
-
-        var $container = $('.isotopeWrapper');
-        var $resize = $('.isotopeWrapper').attr('id');
-        // initialize isotope
-        
-        $container.isotope({
-            itemSelector: '.isotopeItem',
-            resizable: false, // disable normal resizing
-            masonry: {
-                columnWidth: $container.width() / $resize
-            }
+/*!
+ * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
 
 
-            
-        });
+// Show full page LoadingOverlay
+$.LoadingOverlay("show",{
+    color       : "rgba(255, 255, 255, 1)", 
+    image       : "ark.svg",
+    fade            : [0, 200],
+    imagePosition   : "center center",
+    maxSize         : "200px",
+    minSize         : "20px",
+    resizeInterval  : 50,
+    size            : "50%" ,
+    zIndex          : 30000
+});
 
-        $('#filter a').click(function(){
+// Hide it after page loads completely
+$(window).load(function() {
+    $.LoadingOverlay("hide");
+    new WOW().init();
+});
+
+// jQuery to collapse the navbar on scroll
+function collapseNavbar() {
+    if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+}
+
+$(window).scroll(collapseNavbar);
+$(document).ready(collapseNavbar);
+
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
+// Closes the Responsive Menu on Menu Item Click
+$('.navbar-collapse ul li a').click(function() {
+  if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
+    $('.navbar-toggle:visible').click();
+  }
+});
+
+var $container = $('.isotopeWrapper');
+// // initialize isotope
+
+// var $grid = $container.isotope({
+//     itemSelector: '.isotopeItem',
+//     layoutMode: 'fitRows',
+//     // resizable: true, // disable normal resizing
+// });
+
+// $grid.imagesLoaded().progress( function() {
+//     $grid.isotope('layout');
+// });
+
+$('#filter a').click(function(){
+    $('#filter li').removeClass('active');
+    $(this).parent().addClass('active');
+    var selector = $(this).attr('data-filter');
+    $container.isotope({
+        filter: selector,
+    });
+    return false;
+});
+
+// var $container = $('.isotopeWrapper');
+// var $resize = 4;
+// initialize isotope
+
+// $container.isotope({
+//     itemSelector: '.isotopeItem',
+//     resizable: false, // disable normal resizing
+//     masonry: {
+//         columnWidth: $container.width() / $resize
+//     }
+// });
+
+// $('#filter a').click(function(){
+//     $('#filter a').removeClass('current');
+//     $(this).addClass('current');
+//     var selector = $(this).attr('data-filter');
+//     $container.isotope({
+//         filter: selector,
+//         animationOptions: {
+//             duration: 1000,
+//             easing: 'easeOutQuart',
+//             queue: false
+//         }
+//     });
+//     return false;
+// });
+
+ 
+// $(window).smartresize(function(){
+//     $container.isotope({
+//         // update columnWidth to a percentage of container width
+//         masonry: {
+//             columnWidth: $container.width() / $resize
+//         }
+//     });
+// }); 
 
 
 
-            $('#filter a').removeClass('current');
-            $(this).addClass('current');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 1000,
-                    easing: 'easeOutQuart',
-                    queue: false
-                }
-            });
-            return false;
-        });
-        
-        
-        $(window).smartresize(function(){
-            $container.isotope({
-                // update columnWidth to a percentage of container width
-                masonry: {
-                    columnWidth: $container.width() / $resize
-                }
-            });
-        });
-        
 
-}  
+// // Google Maps Scripts
+// var map = null;
+// // When the window has finished loading create our google map below
+// google.maps.event.addDomListener(window, 'load', init);
+// google.maps.event.addDomListener(window, 'resize', function() {
+//     map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
+// });
 
+// function init() {
+//     // Basic options for a simple Google Map
+//     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+//     var mapOptions = {
+//         // How zoomed in you want the map to start at (always required)
+//         zoom: 15,
 
-	// fancybox
-	jQuery(".fancybox").fancybox();
+//         // The latitude and longitude to center the map (always required)
+//         center: new google.maps.LatLng(40.6700, -73.9400), // New York
 
+//         // Disables the default Google Maps UI components
+//         disableDefaultUI: true,
+//         scrollwheel: false,
+//         draggable: false,
 
-	if (Modernizr.mq("screen and (max-width:1024px)")) {
-			jQuery("body").toggleClass("body");
-			
-	} else {
-		var s = skrollr.init({
-			mobileDeceleration: 1,
-			edgeStrategy: 'set',
-			forceHeight: true,
-			smoothScrolling: true,
-			smoothScrollingDuration: 300,
-				easing: {
-					WTF: Math.random,
-					inverted: function(p) {
-						return 1-p;
-					}
-				}
-			});	
-	}
+//         // How you would like to style the map. 
+//         // This is where you would paste any style found on Snazzy Maps.
+//         styles: [{
+//             "featureType": "water",
+//             "elementType": "geometry",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 17
+//             }]
+//         }, {
+//             "featureType": "landscape",
+//             "elementType": "geometry",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 20
+//             }]
+//         }, {
+//             "featureType": "road.highway",
+//             "elementType": "geometry.fill",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 17
+//             }]
+//         }, {
+//             "featureType": "road.highway",
+//             "elementType": "geometry.stroke",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 29
+//             }, {
+//                 "weight": 0.2
+//             }]
+//         }, {
+//             "featureType": "road.arterial",
+//             "elementType": "geometry",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 18
+//             }]
+//         }, {
+//             "featureType": "road.local",
+//             "elementType": "geometry",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 16
+//             }]
+//         }, {
+//             "featureType": "poi",
+//             "elementType": "geometry",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 21
+//             }]
+//         }, {
+//             "elementType": "labels.text.stroke",
+//             "stylers": [{
+//                 "visibility": "on"
+//             }, {
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 16
+//             }]
+//         }, {
+//             "elementType": "labels.text.fill",
+//             "stylers": [{
+//                 "saturation": 36
+//             }, {
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 40
+//             }]
+//         }, {
+//             "elementType": "labels.icon",
+//             "stylers": [{
+//                 "visibility": "off"
+//             }]
+//         }, {
+//             "featureType": "transit",
+//             "elementType": "geometry",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 19
+//             }]
+//         }, {
+//             "featureType": "administrative",
+//             "elementType": "geometry.fill",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 20
+//             }]
+//         }, {
+//             "featureType": "administrative",
+//             "elementType": "geometry.stroke",
+//             "stylers": [{
+//                 "color": "#000000"
+//             }, {
+//                 "lightness": 17
+//             }, {
+//                 "weight": 1.2
+//             }]
+//         }]
+//     };
 
+//     // Get the HTML DOM element that will contain your map 
+//     // We are using a div with id="map" seen below in the <body>
+//     var mapElement = document.getElementById('map');
 
+//     // Create the Google Map using out element and options defined above
+//     map = new google.maps.Map(mapElement, mapOptions);
 
-	//scroll menu
-	jQuery('.appear').appear();
-	jQuery(".appear").on("appear", function(data) {
-			var id = $(this).attr("id");
-			jQuery('.nav li').removeClass('active');
-			jQuery(".nav a[href='#" + id + "']").parent().addClass("active");					
-		});
-
-
-		//parallax
-        var isMobile = false;
-
-        if(Modernizr.mq('only all and (max-width: 1024px)') ) {
-            isMobile = true;
-        }
-
-        
-        if (isMobile == false && ($('#parallax1').length  ||isMobile == false &&  $('#parallax2').length ||isMobile == false &&  $('#testimonials').length))
-        {
-
-
-            $(window).stellar({
-                responsive:true,
-                scrollProperty: 'scroll',
-                parallaxElements: false,
-                horizontalScrolling: false,
-                horizontalOffset: 0,
-                verticalOffset: 0
-            });
-
-        }
-	
-	//nicescroll
-	$("html").niceScroll({zindex:999,cursorborder:"",cursorborderradius:"2px",cursorcolor:"#191919",cursoropacitymin:.5});
-	function initNice() {
-		if($(window).innerWidth() <= 960) {
-			$('html').niceScroll().remove();
-		} else {
-			$("html").niceScroll({zindex:999,cursorborder:"",cursorborderradius:"2px",cursorcolor:"#191919",cursoropacitymin:.5});
-		}
-	}
-	$(window).load(initNice);
-	$(window).resize(initNice);
-
-})(jQuery);
+//     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
+//     var image = 'img/map-marker.png';
+//     var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
+//     var beachMarker = new google.maps.Marker({
+//         position: myLatLng,
+//         map: map,
+//         icon: image
+//     });
+// }
