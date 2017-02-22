@@ -1,707 +1,736 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-	<title>Aerial Robotics Kharagpur</title>
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' /> <!-- Bootstrap -->
-	<script src="js/jquery.min.js"></script> <!-- jQuery -->
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> <!-- Custom Theme files -->
-	<link href="css/ihover.css" rel="stylesheet"> <!-- Circle Hover -->
-	<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />	
-	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/bootstrap-theme.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!--webfont-->
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
-	<!--animated-css-->
-	<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css' />
-	<link rel="icon" type="image/png" href="favicon-96x96.png">
-	<script src="js/wow.min.js"></script>
-	<script>
-	  new WOW().init();
-	</script>
-	<!--/animated-css-->
-	<!--script-->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<!--/script-->
-	<script type="text/javascript">
-	  jQuery(document).ready(function($) {
-	  $(".scroll").click(function(event){		
-	  event.preventDefault();
-	  $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-	  });
-	  });
-	</script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-85242622-1', 'auto');
-	  ga('send', 'pageview');
-	</script>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
-	  fjs.parentNode.insertBefore(js, fjs);
-	  }(document, 'script', 'facebook-jssdk'));</script>
-	<script src="https://apis.google.com/js/platform.js"></script>
-  </head>
-  <body>
-	<!---->
-	<div class="banner">
-	  <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(255,255,255,0);" data-300="line-height:60px; height:60px; background-color:rgba(255,255,255,.8);">
-		<div class="container">
-		  <div class="navbar-header">	 
-			<div class="logo wow fadeInLeft" data-wow-delay="0.5s">
-			  <a class="navbar-brand" href="index.html" data-0="line-height:90px;" data-300="line-height:50px;"><div data-0="background-image:url(images/ark.png);background-repeat:no-repeat;background-size:contain;height:90px;width:90px;" data-300="background-image:url(images/ark.png);background-size:contain;height:60px;width:60px;"></div></a>
-			</div>	
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			  <span class="menu"></span>
-			</button>
-		  </div>
-		  <div class="navbar-collapse collapse">	
-			<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-			  <li class="active"><a href="#home">HOME</a></li>
-			  <li><a href="#overview">OVERVIEW</a></li>
-			  <li><a href="#description">DESCRIPTION</a></li>
-			  <li><a href="#timeline">TIMELINE</a></li>
-			  <li><a href="#team">TEAM</a></li>
-			  <li><a href="#media">Media</a></li>
-			  <li><a href="#joinus">JOIN US</a></li>
-			  <li><a href="#contactus">CONTACT US</a></li>
-			</ul>
-		  </div>
-		</div>
-	  </div>
-	  <div class="container">
-		<div id="home" class="box_round banner-text wow fadeInUp"  style="background-color:rgba(0, 0, 0, 0.52);margin-top: 12em;" data-wow-delay="0.5s">
-		  <h1>Aerial Robotics Kharagpur <br>
-			<span>ARK</span></h1>
-		  <h2>We are an enthusiastic group of students working towards building autonomous aerial vehicles, based at Indian Institute of Technology Kharagpur.</h2>
-		  <h2> We are advised by <a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=abmYX">Prof. Jayanta Mukhopadhyay</a> of the Department of Computer Science and Engineering and <span><a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=bUmdQ">Prof. D.K Pratihar</a></span> of the Department of Mechanical Engineering and are funded by the <a href="http://www.ttg-sric.iitkgp.ernet.in/sric/">Sponsored Research and Industrial Consultancy</a> facility of IIT Kharagpur as part of <a href="www.cferobotics.iitkgp.ac.in">Centre for Excellence in Robotics</a>, IIT Kharagpur.  <br>The principal investigator for this project is <a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=aVmWZ">Prof. Somesh Kumar</a>, President, Technology Students' Gymkhana</h2>
-		  <div class="clearfix"></div>
-	  	  <div class="fb-like" data-href="https://www.facebook.com/aerialroboticskgp" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div><br><br>
-	  	  <div class="g-ytsubscribe" data-channelid="UCkEnllRgweDTNePStFnY3BQ" data-layout="default" data-theme="dark" data-count="hidden"></div>
-	  	  <br><br>
-		</div>
-	  </div>
-	</div>
+<html lang="en">
 
-	<div id="overview" class="brief">
-	  <div class="container">
-		<h4>OVERVIEW</h4>
-		<div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
-		  <center><img src="images/browse.jpg" alt="" style="border-radius: 12%"/></center>
-		  <div class="brief-grid">
-			<div class="brief-grid-text">
-			  <center><h3>Autonomous Flying Vehicles</h3></center>
-			  <p>We aim to move the state-of-the-art in aerial robotics forward. Our drones, when ready, would be capable of autonomous flight, localization in GPS denied environments, tracking and interacting with mobile ground robots as well as other drones, and much more!</p>
-			</div>
-		  </div>
-		</div>
-		<div class="col-md-6 brief-grids wow fadeInRight" data-wow-delay="0.5s">
-		  <a href="http://www.aerialroboticscompetition.org/" target="_blank"><center><img src="images/browse2.png" alt="" style="border-radius: 12%"/></center></a>
-		  <div class="brief-grid">
-			<div class="brief-grid-text">
-			  <center><h3>International Aerial Robotics Competition</h3></center>
-			  <p>IARC is the longest running collegiate aerial robotics challenge in the world. Entering its third decade, the competition continues to tackle challenges that are currently impossible for any flying robots owned by government or industry. We aim to participate in its next iteration.</p>
-			</div>
-		  </div>
-		</div>
-		<div class="clearfix"> </div>		 
-	  </div>
-	</div>
-	<!---->
-	
-	<div id="description" class="brief">
-	  <div class="container">
-		<div class="feature-text text-center">
-		  <h3>PROJECT DESCRIPTION</h3>	
-		</div>
-		<ul class="nav nav-pills">
-		  <li class="active"><a data-toggle="tab" href="#overall">Overall</a></li>
-		  <li><a data-toggle="tab" href="#software">Software Team</a></li>
-		  <li><a data-toggle="tab" href="#controls">Controls Team</a></li>
-		</ul>
-		<div class="tab-content">
-  		  <div id="overall" class="tab-pane fade in active">
-	  		<div class="body-description">
+<head>
 
-			  <p>ARK aims to develop a flexible aerial robotics framework which can be easily used to control aerial vehicles. Eventually, we want to move to multiple decentralised aerial robot swarms in an outdoors setting.
-				Currently, we have designed an architecture for IARC which we plan to optimise iteratively for participation.
-			  </p>
-			  
-			  <center><img src="images/desc/archi.png" height=350></center>
-			  
-			</div>
-		  </div>
-		</div>
-		<div class="tab-content">
-  		  <div id="software" class="tab-pane fade in">
-	  		<div class="body-description">
-	  		  The software team is responsible for developing algorithms in computer vision including localisation, object detection, tracking, path planning and 3D obstacle avoidance along with artifical intelligence algorithms for exploration and herding.
-			  Current Areas of focus are:
-			</div>
-			<br>
-			<ul class="nav nav-pills">
-			  <li class="active"><a data-toggle="pill" href="#object">Object Detection and Tracking</a></li>
-			  <li><a data-toggle="pill" href="#ground">Ground Truth Validation</a></li>
-			  <li><a data-toggle="pill" href="#grid">Grid Based Localisation</a></li>
-			  <li><a data-toggle="pill" href="#flow">Optical Flow Localisation</a></li>
-			  <li><a data-toggle="pill" href="#herd">Herding Simulation</a></li>
-			  <li><a data-toggle="pill" href="#simu">Simulation Platform on Gazebo</a></li>
-			  
-			</ul>
-			<br>
-			<div class="tab-content">
-			  <div id="object" class="tab-pane fade in active body-description">
-				<h5><b>Object Detection and Tracking</b></h5>
-				<p>
-				  Object detection and tracking is widely used with applications in monitoring and surveillance. In IARC, the task requires us to guide ground robots towards a line. We plan to use a fisheye lens to see the whole arena and then track the ground robots, maintaining the trackers even when they are out of field of view. We are using Kalman filter for the tracking on the linear model of motion of the ground robots. 
-				</p><br>
-				<center><img src="images/desc/kalman.jpg" height=450></center>
-			  </div>
-			  <div id="ground" class="tab-pane fade body-description">
-				<h5><b>Ground Truth Validation</b></h5>
-				<p>A true value of the robots position and orientation is a necessary metric to compare our algorithms of self estimation, detection and tracking. We are using two high-definition cameras fixed on the arena frame to get the depth of the desired object which will then be transformed into a global coordinate system of the arena.</p><br>
-				<center><img src="images/desc/depth.png" height=450></center>
-			  </div>
-			  <div id="grid" class="tab-pane fade body-description">
-				<h5><b>Grid Based Localization</b></h5>
-				<p>IARC is held in an indoor GPS denied environment so localization is a major challenge. IARC provides grids on the ground which can be detected and used to localize.</p><br>
-				<center>  <img src="images/desc/grid.jpg" height=450></center>
-			  </div>
-			  <div id="flow" class="tab-pane fade body-description">
-				<h5><b>Optical Flow Localisation</b></h5>
-				<p>Optical flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer (an eye or a camera) and the scene. From the optical flow of a video feed, a path and trajectory of robot motion can be inversely computed, which is one of the most widely used ways of localisation in GPS denied environment.</p><br>
-				<center><img src="images/desc/flow.jpg" height=450></center>
-			  </div>
-			  <div id="herd" class="tab-pane fade body-description">
-				<h5><b>Herding</b></h5>
-				<p>IARC has an interesting AI aspect in it's problem statement which is to herd robots past the green line and avoid them crossing the red line. This brings an additional constraint of targetting the robots moving towards red line first and optimizing the attack behavior so that maximum robots can be herded across the line.</p><br>
-				<center><img src="images/desc/herd.jpg" height=450></center>
-			  </div>
-			  
-			  <div id="simu" class="tab-pane fade body-description">
-				<h5><b>Simulation on Gazebo</b></h5>
-				<p> Aerial Robots are inherently difficult to control and testing on real robots is not always feasible. Hence, a simulation platform on Gazebo which uses the Quad model and physics and also simulates sensor noise and environment is an important step.</p><br>
-				<center><img src="images/desc/Quad_simulator.png" height=450></center>
-			  </div>
-			</div>
-  		  </div>
-		  <div id="controls" class="tab-pane fade in">
-			<div class="body-description">
-	  		  The Controls Team aims towards a smooth motion of the aerial robot in space and that they attain the desired speed and orientation avoiding obstacles. Current research includes:
-			</div>
- 			<br>
-			<ul class="nav nav-pills">
-			  <li class="active"><a data-toggle="pill" href="#pid">Two Layered PID</a></li>
-			  <li><a data-toggle="pill" href="#low">Low Level Controller</a></li>
-			  <li><a data-toggle="pill" href="#self">Self Estimation</a></li>
-			  <li><a data-toggle="pill" href="#path">Path Planner</a></li>
-			</ul>
-			<br>
-			<div class="tab-content">
-			  <div id="pid" class="tab-pane fade in active body-description">
-				<h5><b>Two Layered PID</b></h5>
-				<p>An aerial robot can control it's position in the form of roll. pitch and yaw but in the world frame, It gets an input or feed back in the form of X,Y and Z. So, a cascaded PID with self adjusting gains and parameters is the direction towards which we are working. We have got a naive PID over RPY and XYZ working on AR Drone and are working to shift to self-adjusting parameters.</p><br>
-				<center><img src="images/desc/pid.png" height=450></center>
-			  </div>
-			  <div id="low" class="tab-pane fade body-description">
-				<h5><b>Low Level Controller</b></h5>
-				<p>Low Level Controller includes the embedded system on the robot end where commands from the high level controller and processed and converted into Motor Commands. We have developed a MATLAB Simulink model for our own chassis and working on that to develop on of our controller. Also, we are trying to get Telekyb Near Hover Controller from Max Planck Institute of Biological Cybernetics to run on our own boards which control the motors. </p><br>
-				<center><img src="images/desc/low.jpg" height=450></center>
-			  </div>
-			  <div id="self" class="tab-pane fade body-description">
-				<h5><b>Self Estimation</b></h5>
-				<p>A robot should know where is it. Knowing the location of the robot in the world using onboard sensors is a major challenge in robotics. We are using IMU data along with vision information and SONAR sensors to fuse the information and get an estimate of our own position. We are constantly trying to improve this by comparing it with our true value setup and move the state of the art ahead.</p><br>
-				<center><img src="images/desc/self.jpg" height=450></center>
-			  </div>
-			  <div id="path" class="tab-pane fade body-description">
-				<h5><b>Path Planner</b></h5>
-				<p>The robots in order to perform some tasks needs to move from one place to another. During it's course of motion, it may deviate and the information from estimator and vision is noisy. Moroever, in order to fulfill the IARC problem statement, we need a time dependent trajectory generated and followed to optimally reach a ground robot and perform any action on it.
-				</p><br>
-				<center><img src="images/desc/path.png" height=450></center>
-			  </div>
-			  
-			</div>
-  		  </div>
-		</div>
-	  </div>
-	  
-	  <div id="timeline" class="features">
-		<div class="container">
-		  <div class="feature-text text-center">
-			<h3>TIMELINE</h3>
-			
-		  </div>
-		  <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=17GkwckjXf9-SOHWS-RTAXMs0ZKNH2kkr-cO_gQnfGOE&font=Default&lang=en&initial_zoom=2&start_at_slide=12&height=650' width='100%' height='650' frameborder='0'></iframe>
-		</div>
-	  </div>
-	  <!-- section works -->
-	  <div id="team" class="features">
-		<div class="container">
-		  
-		  <div class="container">
-			<div class="feature-text text-center">
-			  <h3>TEAM</h3>
-			  
-			</div>
-		  </div>
-		  
-		  <div class="row">
-			<nav id="filter" class="col-md-12 text-center">
-			  <ul>
-				<li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
-				<li><a href="#"  class="btn-theme btn-small" data-filter=".controls" >Controls</a></li>
-				<li><a href="#"  class="btn-theme btn-small" data-filter=".software">Software</a></li>
-				<li><a href="#" class="btn-theme btn-small" data-filter=".alum">Alumni</a></li>
-				<li><a href="#" class="btn-theme btn-small" data-filter=".prof">Professors</a></li>
-				
-			  </ul>
-			</nav>
-			<div class="col-md-12">
-			  <div class="row">
-				<div class="portfolio-items isotopeWrapper clearfix" id="4">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-				  <article class="col-md-2 isotopeItem prof">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/somesh.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3><a href="http://www.facweb.iitkgp.ernet.in/~smsh/">Prof. Somesh Kumar</a></h3>
-						<span>Principal Investigator, Department of Mathematics</span>
-					  </div>
-					</div>
-				  </article>
+    <title>Aerial Robotics Kharagpur</title>
 
-				  <article class="col-md-2 isotopeItem prof">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/jayanta.JPG" alt="" /></figure>
-					  <div class="team-detail">
-						<h3><a href="http://www.facweb.iitkgp.ernet.in/~jay/">Prof. Jayanta Mukhopadhyay</a></h3>
-						<span>Mentor,Department of Computer Science & Engineering</span>
-					  </div>
-					</div>
-				  </article>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
 
-				  <article class="col-md-2 isotopeItem prof">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/dkp.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3><a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=bUmdQ">Prof. Dilip Kumar Pratihar</a></h3>
-						<span>Mentor, Department of Mechanical Engineering</span>
-					  </div>
-					</div>
-				  </article>
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-				  
-				  <article class="col-md-2 isotopeItem alum">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/pp.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Aditya Agarwal</h3>
-						<span>Founder, Alumnus</span>
-					  </div>
-					</div>
-				  </article>
 
-				  <article class="col-md-2 isotopeItem alum">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/cb.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Chaitanya B</h3>
-						<span>Founder, Alumnus</span>
-					  </div>
-					</div>
-				  </article>
 
-				  <article class="col-md-2 isotopeItem alum">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/avr.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Avinash Ruchandani</h3>
-						<span>Alumnus, Software Team</span>
-					  </div>
-					</div>
-				  </article>
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="favicon-96x96.png">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-				  <article class="col-md-2 isotopeItem alum">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/githin.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Githin John</h3>
-						<span>Founder, Alumnus</span>
-					  </div>
-					</div>
-				  </article>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-				  <article class="col-md-2 isotopeItem alum">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/mrinal.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3><a href="http://www.mrinalmohit.com">Mrinal Mohit</a></h3>
-						<span>Founder, Alumnus</span>
-					  </div>
-					</div>
-				  </article>
+</head>
 
-				  <article class="col-md-2 isotopeItem software">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/soumyadeep.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3><a href="http://www.soumyadeepmukherjee.com">Soumyadeep Mukherjee</a></h3>
-						<span>Team Head</span>
-					  </div>
-					</div>
-				  </article>
 
-				  <article class="col-md-2 isotopeItem software">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/sairam.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Sairam K</h3>
-						<span>Head, Software Team</span>
-					  </div>
-					</div>
-				  </article>
 
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/rishal.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Rishal Raj</h3>
-						<span>Head, Controls Team</span>
-					  </div>
-					</div>
-				  </article>			
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-				  <article class="col-md-2 isotopeItem software">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/kk.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Kumar Krishna Agrawal</h3>
-						<span>Head, Software Team</span>
-					  </div>
-					</div>
-				  </article>
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars" style="color:#000;"></i>
+                </button>
+                <a href="#page-top">
+                    <img class="wow fadeInLeft navbar-brand" data-wow-delay="0.5s" src="images/ark.png">
+                </a>
+            </div>
 
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/vishnu.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Vishnu Sharma</h3>
-						<span>Head, Controls Team</span>
-					  </div>
-					</div>
-				  </article>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#page-top">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#overview">Overview</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#description">Description</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#media">Media</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#timeline">Timeline</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-				  <article class="col-md-2 isotopeItem alum">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/jit.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Jit Ray Chowdhury</h3>
-						<span>Mentor, Alumnus</span>
-					  </div>
-					</div>
-				  </article>
+    <!-- Intro Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('images/cover.png');"></div>      
+                <div class="animated bounceInRight carousel-caption">
+                    <h2>Aerial Robotics Kharagpur<br>ARK</h2>
+                    <h6>We are an enthusiastic group of students working towards building autonomous aerial vehicles, based at Indian Institute of Technology Kharagpur.</h6>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('images/albatross.JPG');"></div>
+                <div class="animated bounceInRight carousel-caption">
+                    <h2>Albatross</h2>
+                    <h4>The First one of our bird</h4>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('images/canary.JPG');"></div>
+                <div class="animated bounceInRight carousel-caption">
+                    <h2>Canary</h2>
+                    <h4>The wooden bird</h4>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('images/eagle.JPG');"></div>
+                <div class="animated bounceInRight carousel-caption">
+                    <h2>Eagle</h2>
+                    <h4>The hexrotor bird</h4>
+                </div>
+            </div>          
+        </div>  
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a> 
+    </header>
 
-				  <article class="col-md-2 isotopeItem alum">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/prasann.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Prasann Jain</h3>
-						<span>Alumnus, Controls Team</span>
-					  </div>
-					</div>
-				  </article>
-				  
-				  <article class="col-md-2 isotopeItem alum">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/keshav.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Keshav Sarraf</h3>
-						<span>Alumnus, Controls Team</span>
-					  </div>
-					</div>
-				  </article>
+    <!-- Overview Section -->
+    <section id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Overview</h2>
+                    <h3 class="section-subheading text-muted">The Goal we are chasing.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img class="wow fadeInUp" src="images/browse.jpg" alt="" style="height:275px;border-radius: 12%"/>
+                    <h4 class="wow fadeInUp overview-heading">Autonomous Flying Vehicles</h4>
+                    <p class="wow fadeInUp text-muted">We aim to move the state-of-the-art in aerial robotics forward. Our drones, when ready, would be capable of autonomous flight, localization in GPS denied environments, tracking and interacting with mobile ground robots as well as other drones, and much more!</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="wow fadeInUp" src="images/browse2.png" alt="" style="height:275px;border-radius: 12%"/>
+                    <h4 class="wow fadeInUp overview-heading">International Aerial Robotics Competition</h4>
+                    <p class="wow fadeInUp text-muted">IARC is the longest running collegiate aerial robotics challenge in the world. Entering its third decade, the competition continues to tackle challenges that are currently impossible for any flying robots owned by government or industry. We aim to participate in its next iteration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				  <article class="col-md-2 isotopeItem software">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/ankush.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Ankush Chatterjee</h3>
-						<span>Head, Software Team</span>
-					  </div>
-					</div>
-				  </article>
+    <!-- Description Section -->
+    <section id="description">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Project Description</h2>
+                    <h3 class="section-subheading text-muted">Details of the work done.</h3>
+                </div>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a data-toggle="tab" href="#overall">Overall</a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#software">Software Team</a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#controls">Controls Team</a>
+                </li>
+            </ul>
+            <br>    
+            <div class="tab-content">
+                <div id="overall" class="tab-pane fade in active">
+                    <div class="body-description">
 
-				  <article class="col-md-2 isotopeItem software">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/manash.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<a href="http://manashpratim.in/"><h3>Manash Pratim Das</h3></a>
-						<span>Member, Software Team</span>
-					  </div>
-					</div>
-				  </article>
-				  
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/gaurav.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Gaurav Gardi</h3>
-						<span>Head, Controls Team</span>
-					  </div>
-					</div>
-				  </article>
-
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/adarsh.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Adarsh Kosta</h3>
-						<span>Member, Controls Team</span>
-					  </div>
-					</div>
-				  </article>
-
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/sakshi.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Sakshi Agarwal</h3>
-						<span>Member, Controls Team</span>
-					  </div>
-					</div>
-				  </article>
-
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/shashwat.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Shashwat Gupta</h3>
-						<span>Member, Controls Team</span>
-					  </div>
-					</div>
-				  </article>
-
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member align-center">
-					  <figure class="member-photo"><img src="images/ankit.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Kumar Ankit</h3>
-						<span>Member, Controls Team</span>
-					  </div>
-					</div>
-				  </article>
-				  
- 				  <article class="col-md-2 isotopeItem software">
-                    <div class="team-member" align="center">
-                      <figure class="member-photo"><img src="images/swadha.jpg" alt="" /></figure>
-                      <div class="team-detail">
-                        <h3>Swadha Gupta</h3>
-                        <span>Member, Software Team</span>                  
-                      </div>
+                        <p>ARK aims to develop a flexible aerial robotics framework which can be easily used to control aerial vehicles. Eventually, we want to move to multiple decentralised aerial robot swarms in an outdoors setting.
+                        Currently, we have designed an architecture for IARC which we plan to optimise iteratively for participation.
+                        </p>
+                        <center>
+                            <img src="images/desc/archi.png" height=350>
+                        </center>
+              
                     </div>
-					
-                  </article>
-				  <article class="col-md-2 isotopeItem software">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/ashwary.jpg" alt="" /></figure>
-					  <div class="team-detail">
-						<h3>Ashwary Anand</h3>
-						<span>Member, Software Team</span>					
-					  </div>
-					</div>
-    			  </article>
+                </div>
 
-                  <article class="col-md-2 isotopeItem software">
-                    <div class="team-member" align="center">
-                      <figure class="member-photo"><img src="images/Joshua.jpg" alt="" /></figure>
-                      <div class="team-detail">
-                        <h3>Joshua Ebenezer</h3>
-                        <span>Member, Software Team></span>                  
-                      </div>
+                <div id="software" class="tab-pane fade in">
+                    <div class="body-description">
+                        The software team is responsible for developing algorithms in computer vision including localisation, object detection, tracking, path planning and 3D obstacle avoidance along with artifical intelligence algorithms for exploration and herding.
+                        Current Areas of focus are:
                     </div>
-                  </article>
+                    <br>
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a data-toggle="pill" href="#object">Object Detection and Tracking</a>
+                        </li>
+                        <li>
+                            <a data-toggle="pill" href="#ground">Ground Truth Validation</a>
+                        </li>
+                        <li>
+                            <a data-toggle="pill" href="#grid">Grid Based Localisation</a>
+                        </li>
+                        <li>
+                            <a data-toggle="pill" href="#flow">Optical Flow Localisation</a>
+                        </li>
+                        <li>
+                            <a data-toggle="pill" href="#herd">Herding Simulation</a>
+                        </li>
+                        <li>
+                            <a data-toggle="pill" href="#simu">Simulation Platform on Gazebo</a>
+                        </li>
+              
+                    </ul>
+                    <br>
+                    <div class="tab-content">
 
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/Shivang.jpg" alt="" /></figure>
-					  <div class="team-detail">
-					    <h3>Shivang Agrawal</h3>
-						<span>Member, Controls</span>                  
-					  </div>
-					</div>
-				  </article>
-				  
-				  <article class="col-md-2 isotopeItem controls">
-                    <div class="team-member" align="center">
-                      <figure class="member-photo"><img src="images/amitPathak.jpg" alt="" /></figure>
-                      <div class="team-detail">
-                        <h3>Amit Kumar Pathak</h3>
-                        <span>Member, Controls Team</span>                  
-                      </div>
+                        <div id="object" class="tab-pane fade in active body-description">
+                            <h5><b>Object Detection and Tracking</b></h5>
+                            <p>Object detection and tracking is widely used with applications in monitoring and surveillance. In IARC, the task requires us to guide ground robots towards a line. We plan to use a fisheye lens to see the whole arena and then track the ground robots, maintaining the trackers even when they are out of field of view. We are using Kalman filter for the tracking on the linear model of motion of the ground robots.</p>
+                            <br>
+                            <center>
+                                <img src="images/desc/kalman.jpg" height=450>
+                            </center>
+                        </div>
+
+                        <div id="ground" class="tab-pane fade body-description">
+                            <h5><b>Ground Truth Validation</b></h5>
+                            <p>A true value of the robots position and orientation is a necessary metric to compare our algorithms of self estimation, detection and tracking. We are using two high-definition cameras fixed on the arena frame to get the depth of the desired object which will then be transformed into a global coordinate system of the arena.</p>
+                            <br>
+                            <center>
+                                <img src="images/desc/depth.png" height=450>
+                            </center>
+                        </div>
+
+                        <div id="grid" class="tab-pane fade body-description">
+                            <h5><b>Grid Based Localization</b></h5>
+                            <p>IARC is held in an indoor GPS denied environment so localization is a major challenge. IARC provides grids on the ground which can be detected and used to localize.</p>
+                            <br>
+                            <center>
+                                <img src="images/desc/grid.jpg" height=450>
+                            </center>
+                        </div>
+
+                        <div id="flow" class="tab-pane fade body-description">
+                            <h5><b>Optical Flow Localisation</b></h5>
+                            <p>Optical flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer (an eye or a camera) and the scene. From the optical flow of a video feed, a path and trajectory of robot motion can be inversely computed, which is one of the most widely used ways of localisation in GPS denied environment.</p>
+                            <br>
+                            <center>
+                                <img src="images/desc/flow.jpg" height=450>
+                            </center>
+                        </div>
+
+                        <div id="herd" class="tab-pane fade body-description">
+                            <h5><b>Herding</b></h5>
+                            <p>IARC has an interesting AI aspect in it's problem statement which is to herd robots past the green line and avoid them crossing the red line. This brings an additional constraint of targetting the robots moving towards red line first and optimizing the attack behavior so that maximum robots can be herded across the line.</p>
+                            <br>
+                            <center>
+                                <img src="images/desc/herd.jpg" height=450>
+                            </center>
+                        </div>
+              
+                        <div id="simu" class="tab-pane fade body-description">
+                            <h5><b>Simulation on Gazebo</b></h5>
+                            <p> Aerial Robots are inherently difficult to control and testing on real robots is not always feasible. Hence, a simulation platform on Gazebo which uses the Quad model and physics and also simulates sensor noise and environment is an important step.</p>
+                            <br>
+                            <center>
+                                <img src="images/desc/Quad_simulator.png" height=450>
+                            </center>
+                        </div>
+
                     </div>
-              	  </article>
+                </div>
 
-				  <article class="col-md-2 isotopeItem controls">
-				    <div class="team-member" align="center">
-				      <figure class="member-photo"><img src="images/vivek.jpg" alt="" /></figure>
-				      <div class="team-detail">
-				        <h3>Vivek Mudgal</h3>
-				        <span>Member, Controls Team</span>
-				      </div>
-				    </div>
-				  </article>
-				  
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/kris.jpg" alt="" /></figure>
-					  <div class="team-detail">
-					    <h3>Krishnakant Deshmukh</h3>
-						<span>Member, Controls Team</span>                  
-					  </div>
-					</div>
-				  </article>				
+                <div id="controls" class="tab-pane fade in">
+                    <div class="body-description">
+                        The Controls Team aims towards a smooth motion of the aerial robot in space and that they attain the desired speed and orientation avoiding obstacles. Current research includes:
+                    </div>
+                    <br>
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a data-toggle="pill" href="#pid">Two Layered PID</a>
+                        </li>
+                        <li>
+                            <a data-toggle="pill" href="#low">Low Level Controller</a>
+                        </li>
+                        <li>
+                            <a data-toggle="pill" href="#self">Self Estimation</a>
+                        </li>
+                        <li>
+                            <a data-toggle="pill" href="#path">Path Planner</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <div class="tab-content">
 
-				  <article class="col-md-2 isotopeItem controls">
-				    <div class="team-member" align="center">
-				      <figure class="member-photo"><img src="images/stuti.jpg" alt="" /></figure>
-				      <div class="team-detail">
-				        <h3>Stuti Modi</h3>
-				        <span>Member, Controls Team</span>
-				      </div>
-				    </div>
-				  </article>
-				  
-				  <article class="col-md-2 isotopeItem controls">
-					<div class="team-member" align="center">
-					  <figure class="member-photo"><img src="images/aman.jpg" alt="" /></figure>
-					  <div class="team-detail">
-					    <h3>Aman Chandra</h3>
-						<span>Member, Controls Team</span>                  
-					  </div>
-					</div>
-				  </article>
-				  
-				  
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div> 
+                        <div id="pid" class="tab-pane fade in active body-description">
+                            <h5><b>Two Layered PID</b></h5>
+                            <p>An aerial robot can control it's position in the form of roll. pitch and yaw but in the world frame, It gets an input or feed back in the form of X,Y and Z. So, a cascaded PID with self adjusting gains and parameters is the direction towards which we are working. We have got a naive PID over RPY and XYZ working on AR Drone and are working to shift to self-adjusting parameters.</p>
+                            <br>
+                            <center>
+                                <img src="images/desc/pid.png" height=450>
+                            </center>
+                        </div>
 
-	<div id="media" class="contact">
-	  <div class="container">
-		<div class="contact-text text-center">
-		  <h3>Media Coverage</h3>
-		  <p>Recent media articles about us</p>
-		  <br>
-		  <a href = "http://timesofindia.indiatimes.com/city/kolkata/IIT-Kharagpur-students-developing-fully-indigenous-drones/articleshow/54897093.cms"><img src="images/media/toi.png" alt="Times of India" title="Times of India"></a>
-		  <a href = "http://economictimes.indiatimes.com/news/science/iit-kharagpur-students-developing-fully-indigenous-drones/articleshow/54896790.cms"><img src="images/media/ET.png" alt="Economic Times" title="Economic Times"></a>
-		  <a href = "http://indianexpress.com/article/technology/gadgets/iit-kharagpur-students-developing-fully-indigenous-drones-3087564/"><img src="images/media/indianxpress.png" alt="Indian Express" title="Indian Express"></a>
-		  <a href = "http://www.business-standard.com/article/current-affairs/make-in-india-iit-kharagpur-students-developing-fully-indigenous-drones-116101700466_1.html"><img src="images/media/BS.png" alt="Business Standard" title="Business Standard"></a>
-		  <br>
-		  <a href = "http://www.daijiworld.com/news/news_disp.asp?n_id=419125"><img src="images/media/dw.png" alt="Daijiworld" title="Daijiworld"></a>
-		  <a href = "http://www.nayaindia.com/technology/iit-kharagpur-student-ark-sric-indigenous-drone-develop-570851.html"><img src="images/media/nayaindia.png" alt="Naya India" title="Naya India"></a>
-		</div>
-	  </div>
-	</div>
+                        <div id="low" class="tab-pane fade body-description">
+                            <h5><b>Low Level Controller</b></h5>
+                            <p>Low Level Controller includes the embedded system on the robot end where commands from the high level controller and processed and converted into Motor Commands. We have developed a MATLAB Simulink model for our own chassis and working on that to develop on of our controller. Also, we are trying to get Telekyb Near Hover Controller from Max Planck Institute of Biological Cybernetics to run on our own boards which control the motors. </p>
+                            <br>
+                            <center>
+                                <img src="images/desc/low.jpg" height=450>
+                            </center>
+                        </div>
 
+                        <div id="self" class="tab-pane fade body-description">
+                            <h5><b>Self Estimation</b></h5>
+                            <p>A robot should know where is it. Knowing the location of the robot in the world using onboard sensors is a major challenge in robotics. We are using IMU data along with vision information and SONAR sensors to fuse the information and get an estimate of our own position. We are constantly trying to improve this by comparing it with our true value setup and move the state of the art ahead.</p>
+                            <br>
+                            <center>
+                            <img src="images/desc/self.jpg" height=450>
+                            </center>
+                        </div>
 
-	  <div id="joinus" class="contact">
-		<div class="container">
-		  <div class="contact-text text-center">
-			<h3>Join Us</h3>
-			<p>We are always open to new members. Fill this and we will have a small task to see if we are good enough for you!</p>
-		  </div>
-		  <div class="contact-form">
-			<form action="http://formspree.io/mpdmanash@gmail.com" method="POST">
-			  <div class="form-group">
-				<label for="name">Your Name</label>
-				<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
-				<div class="validation"></div>
-			  </div>
-			  <div class="form-group">
-				<label for="email">Your Email</label>
-				<input type="email" class="form-control" name="_replyto" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-				<div class="validation"></div>
-			  </div>
-			  <div class="form-group">
-				<label for="subject">Subject</label>
-				<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject" />
-				<div class="validation"></div>
-			  </div>
-			  <div class="form-group">
-				<label for="message">Message</label>
-				(Please Add Your CV Link/Website in this)
-				<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
-				<div class="validation"></div>
-			  </div>
-			  <input type="text" name="_gotcha" style="display:none" />
-			  <input type="hidden" name="_next" value="thanks.html" />
-			  <input type="hidden" name="_cc" value="gaurav.gardi2@gmail.com" />
-			  <button type="submit" class="btn btn-theme pull-left">SEND MESSAGE</button>
-			</form>
+                        <div id="path" class="tab-pane fade body-description">
+                            <h5><b>Path Planner</b></h5>
+                            <p>The robots in order to perform some tasks needs to move from one place to another. During it's course of motion, it may deviate and the information from estimator and vision is noisy. Moroever, in order to fulfill the IARC problem statement, we need a time dependent trajectory generated and followed to optimally reach a ground robot and perform any action on it.</p>
+                            <br>
+                            <center>
+                                <img src="images/desc/path.png" height=450>
+                            </center>
+                        </div>
 
-</form>
-</div>
-</div>	  
-</div>
-<div id="contactus" class="contact">
-  <div class="container">
-	<div class="contact-text text-center">
-	  <h3>Contact Us</h3>
-	  <p>You can contact us at: <br>
-		<a class="tweak" href="mailto:aerialroboticskharagpur@gmail.com"> aerialroboticskharagpur[at]gmail.com </a><br>
-	  </p><br>
-	  <iframe width="560" height="315" src="https://www.youtube.com/embed/B5BDUdOKqoc" frameborder="0" allowfullscreen></iframe>
-	</div>
-  </div>
-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Media Section -->
+    <section id="media">
+       <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Media Coverage</h2>
+                    <h3 class="section-subheading text-muted">Recent media articles about us.</h3>
+                </div>
+                <a href = "http://timesofindia.indiatimes.com/city/kolkata/IIT-Kharagpur-students-developing-fully-indigenous-drones/articleshow/54897093.cms"><img src="images/media/toi.png" alt="Times of India" title="Times of India"></a>
+                <a href = "http://economictimes.indiatimes.com/news/science/iit-kharagpur-students-developing-fully-indigenous-drones/articleshow/54896790.cms"><img src="images/media/ET.png" alt="Economic Times" title="Economic Times"></a>
+                <a href = "http://indianexpress.com/article/technology/gadgets/iit-kharagpur-students-developing-fully-indigenous-drones-3087564/"><img src="images/media/indianxpress.png" alt="Indian Express" title="Indian Express"></a>
+                <a href = "http://www.business-standard.com/article/current-affairs/make-in-india-iit-kharagpur-students-developing-fully-indigenous-drones-116101700466_1.html"><img src="images/media/BS.png" alt="Business Standard" title="Business Standard"></a>
+                <br>
+                <a href = "http://www.daijiworld.com/news/news_disp.asp?n_id=419125"><img src="images/media/dw.png" alt="Daijiworld" title="Daijiworld"></a>
+                <a href = "http://www.nayaindia.com/technology/iit-kharagpur-student-ark-sric-indigenous-drone-develop-570851.html"><img src="images/media/nayaindia.png" alt="Naya India" title="Naya India"></a>
+            </div>
+        </div>
+    </section>
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Timeline</h2>
+                    <h3 class="section-subheading text-muted">Relive the History.</h3>
+                </div>
+                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=17GkwckjXf9-SOHWS-RTAXMs0ZKNH2kkr-cO_gQnfGOE&font=Default&lang=en&initial_zoom=2&start_at_slide=12&height=450' width='100%' height='450' frameborder='0'></iframe>
+            </div>
+        </div>
+    </section>
 
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">The Force to reckon with.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <nav id="filter" class="col-md-12 text-center">
+                  <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="#" data-filter="*">All</a></li>
+                    <li role="presentation"><a href="#"  data-filter=".controls" >Controls</a></li>
+                    <li role="presentation"><a href="#"  data-filter=".software">Software</a></li>
+                    <li role="presentation"><a href="#" data-filter=".alum">Alumni</a></li>
+                    <li role="presentation"><a href="#" data-filter=".prof">Professors</a></li>
+                  </ul>
+                </nav>
+            </div>
+            <div class="row isotopeWrapper">
+                <div class="col-sm-3 isotopeItem prof">
+                    <div class="team-member">
+                        <img src="images/somesh.jpg" class="img-responsive" alt="">
+                        <h4><a href="http://www.facweb.iitkgp.ernet.in/~smsh/">Prof. Somesh Kumar</a></h4>
+                        <p >Principal Investigator, Department of Mathematics</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 isotopeItem prof">
+                    <div class="team-member">
+                        <img src="images/jayanta.jpg" class="img-responsive" alt="" />
+                        <h4><a href="http://www.facweb.iitkgp.ernet.in/~jay/">Prof. Jayanta Mukhopadhyay</a></h4>
+                        <p >Mentor,Department of Computer Science & Engineering</p>
+                    </div>
+                </div>
 
-<!--map-->
-<div class="map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.930580990306!2d87.302205!3d22.318465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d44075b4f03ad%3A0xfa4598ca483aabbe!2sTechnology+Students&#39;+Gymkhana!5e0!3m2!1sen!2sin!4v1433697505093"></iframe>
-</div>
-<!--/map-->
-<!---->
-<div class="footer">
-  <div class="container">
-	<div class="ftr-logo">
-	  <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="images/ark.png" alt="" height="100px" width="100px"/></a>
-	</div>
+                <div class="col-sm-3 isotopeItem prof">
+                    <div class="team-member">
+                        <img src="images/dkp.jpg" class="img-responsive " alt="" />
+                        <h4><a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=bUmdQ">Prof. Dilip Kumar Pratihar</a></h4>
+                        <p >Mentor, Department of Mechanical Engineering</p>
+                    </div>
+                </div>
 
-  </div>
-</div>
-<!---->
+                <div class="col-sm-3 isotopeItem alum">
+                    <div class="team-member">
+                        <img src="images/pp.jpg" class="img-responsive " alt="" />
+                        <h4>Aditya Agarwal</h4>
+                        <p >Founder, Alumnus</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-3 isotopeItem alum">
+                    <div class="team-member">
+                        <img src="images/cb.jpg" class="img-responsive " alt="" />
+                        <h4>Chaitanya B</h4>
+                        <p >Founder, Alumnus</p>
+                    </div>
+                 </div>
 
-<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxmZwaoJo3TW82HylIR2kmVCLCPp7IDV4&sensor=false"></script>
-<script src="js/jquery.isotope.min.js"></script>
-<script src="js/jquery.nicescroll.min.js"></script>
-<script src="js/fancybox/jquery.fancybox.pack.js"></script>
-<script src="js/skrollr.min.js"></script>		
-<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
-<script src="js/jquery.localscroll-1.2.7-min.js"></script>
-<script src="js/stellar.js"></script>
-<script src="js/jquery.appear.js"></script>
-<script src="js/validate.js"></script>
-<script src="js/main.js"></script>
+                <div class="col-sm-3 isotopeItem alum">
+                    <div class="team-member">
+                        <img src="images/avr.jpg" class="img-responsive " alt="" />
+                        <h4>Avinash Ruchandani</h4>
+                        <p >Alumnus, Software Team</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem alum">
+                    <div class="team-member">
+                        <img src="images/githin.jpg" class="img-responsive " alt="" />
+                        <h4>Githin John</h4>
+                        <p >Founder, Alumnus</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem alum">
+                    <div class="team-member align-center">
+                        <img src="images/mrinal.jpg" class="img-responsive " alt="" />
+                        <h4><a href="http://www.mrinalmohit.com">Mrinal Mohit</a></h4>
+                        <p >Founder, Alumnus</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-3 isotopeItem software">
+                    <div class="team-member align-center">
+                        <img src="images/soumyadeep.jpg" class="img-responsive " alt="" />
+                        <h4><a href="http://www.soumyadeepmukherjee.com">Soumyadeep Mukherjee</a></h4>
+                        <p >Team Head</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem software">
+                    <div class="team-member align-center">
+                        <img src="images/sairam.jpg" class="img-responsive " alt="" />
+                        <h4>Sairam K</h4>
+                        <p >Head, Software Team</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member align-center">
+                        <img src="images/rishal.jpg" class="img-responsive " alt="" />
+                        <h4>Rishal Raj</h4>
+                        <p >Head, Controls Team</p>
+                    </div>
+                </div>            
+
+                <div class="col-sm-3 isotopeItem software">
+                    <div class="team-member align-center">
+                        <img src="images/kk.jpg" class="img-responsive " alt="" />
+                        <h4>Kumar Krishna Agrawal</h4>
+                        <p >Head, Software Team</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member align-center">
+                        <img src="images/vishnu.jpg" class="img-responsive " alt="" />
+                        <h4>Vishnu Sharma</h4>
+                        <p >Head, Controls Team</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem alum">
+                    <div class="team-member">
+                        <img src="images/jit.jpg" class="img-responsive " alt="" />
+                        <h4>Jit Ray Chowdhury</h4>
+                        <p >Mentor, Alumnus</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem alum">
+                    <div class="team-member align-center">
+                        <img src="images/prasann.jpg" class="img-responsive " alt="" />
+                        <h4>Prasann Jain</h4>
+                        <p >Alumnus, Controls Team</p>
+                    </div>
+                </div>
+              
+                <div class="col-sm-3 isotopeItem alum">
+                    <div class="team-member align-center">
+                        <img src="images/keshav.jpg" class="img-responsive " alt="" />
+                        <h4>Keshav Sarraf</h4>
+                        <p >Alumnus, Controls Team</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-3 isotopeItem software">
+                    <div class="team-member align-center">
+                        <img src="images/ankush.jpg" class="img-responsive " alt="" />
+                        <h4>Ankush Chatterjee</h4>
+                        <p >Head, Software Team</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem software">
+                    <div class="team-member align-center">
+                        <img src="images/manash.jpg" class="img-responsive " alt="" />
+                        <h4>Manash Pratim Das</h4>
+                        <p >Member, Software Team</p>
+                    </div>
+                </div>
+              
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member align-center">
+                        <img src="images/gaurav.jpg" class="img-responsive " alt="" />
+                        <h4>Gaurav Gardi</h4>
+                        <p >Head, Controls Team</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member align-center">
+                        <img src="images/adarsh.jpg" class="img-responsive " alt="" />
+                        <h4>Adarsh Kosta</h4>
+                        <p >Member, Controls Team</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member align-center">
+                        <img src="images/sakshi.jpg" class="img-responsive " alt="" />
+                        <h4>Sakshi Agarwal</h4>
+                        <p >Member, Controls Team</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member align-center">
+                        <img src="images/shashwat.jpg" class="img-responsive " alt="" />
+                        <h4>Shashwat Gupta</h4>
+                        <p >Member, Controls Team</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member align-center">
+                        <img src="images/ankit.jpg" class="img-responsive " alt="" />                     
+                        <h4>Kumar Ankit</h4>
+                        <p >Member, Controls Team</p>
+                    </div>
+                </div>
+              
+                <div class="col-sm-3 isotopeItem software">
+                    <div class="team-member">
+                        <img src="images/ashwary.jpg" class="img-responsive " alt="" />
+                        <h4>Ashwary Anand</h4>
+                        <p >Member, Software Team</p>                 
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-3 isotopeItem software">
+                    <div class="team-member">
+                        <img src="images/Joshua.jpg" class="img-responsive " alt="" />
+                        <h4>Joshua Ebenezer</h4>
+                        <p >Member, Software Team</p>                  
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member">
+                        <img src="images/Shivang.jpg" class="img-responsive " alt="" />
+                        <h4>Shivang Agrawal</h4>
+                        <p >Member, Controls Team</p>                  
+                    </div>
+                </div>
+
+              
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member">
+                        <img src="images/amitPathak.jpg" class="img-responsive " alt="" />
+                        <h4>Amit Kumar Pathak</h4>
+                        <p >Member, Controls Team</p>                  
+                    </div>
+                </div>
+
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member">
+                        <img src="images/vivek.jpg" class="img-responsive " alt="" />
+                        <h4>Vivek Mudgal</h4>
+                        <p >Member, Controls Team</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member">
+                        <img src="images/kris.jpg" class="img-responsive " alt="" /> 
+                        <h4>Krishnakant Deshmukh</h4>
+                        <p >Member, Controls Team</p>                  
+                    </div>
+                </div>               
+                <div class="col-sm-3 isotopeItem controls">
+                    <div class="team-member">
+                        <img src="images/aman.jpg" class="img-responsive " alt="" />
+                        <h4>Aman Chandra</h4>
+                        <p >Member, Controls Team</p>                  
+                    </div>
+                </div>
+
+            </div>
+
+<!--             <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Us</h2>
+                    <ul class="list-inline social-buttons">
+                        <li>
+                            <a href="mailto:aerialroboticskharagpur@gmail.com"><i class="fa fa-envelope fa-fw fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/aerialroboticskgp/"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/quadrotor-IITKgp"><i class="fa fa-github fa-fw fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCkEnllRgweDTNePStFnY3BQ"><i class="fa fa-youtube fa-fw fa-2x"></i></a>
+                        </li>
+                    </ul>
+                    <h3 class="section-subheading">We are always open to new members. Fill this and we will have a small task to see if we are good enough for you!</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <form action="http://formspree.io/mpdmanash@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" class="form-control" name="_replyto" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            (Please Add Your CV Link/Website in this)
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <input type="hidden" name="_next" value="thanks.html" />
+                        <input type="hidden" name="_cc" value="gaurav.gardi2@gmail.com" />
+                        <button type="submit" class="btn btn-primary pull-left">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <div class="footer">
+      <div class="container">
+        <div class="ftr-logo">
+          <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="images/ark.png" alt="" height="100px"/></a>
+        </div>
+
+      </div>
+    </div>
+    <!---->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
+    <script src="js/loadingoverlay.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxmZwaoJo3TW82HylIR2kmVCLCPp7IDV4&sensor=false"></script> -->
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>
