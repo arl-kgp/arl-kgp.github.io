@@ -1,22 +1,21 @@
 # Official Website of Aerial Robotics Kharagpur Research Group
 
-###Add a person to the Team section:
-* Save a 200*200 profile image at `/img/team/`.  
-* Add the following snippet of HTML under `<section id="section-works" class="section appear clearfix">`.
+### Add a person to the Team section:
+* Save a 250*250 profile image at `/img/team/`.  
+* Add the following snippet of HTML under `<section id="team">`.
+
 ```html
-    <article class="col-md-2 isotopeItem <Team>">
-	<div class="team-member" align="center">
-		<figure class="member-photo"><img src="images/<File name>.jpg" alt="" /></figure>
-		<div class="team-detail">
-			<h3><Name of the member></h3>
-			<span><Job Profile></span>					
-		</div>
-	</div>
-    </article>
+    <div class="col-sm-3 isotopeItem <Team>">
+        <div class="team-member">
+            <img src="images/<File name>.jpg" class="img-responsive " alt="" />
+            <h4>Name of Member</h4>
+            <p>Job Profile</p>                  
+        </div>
+    </div>
 ```
    Replace `<Team>` with software/controls/alum.
 
-###Update Timeline
+### Update Timeline
 
 1. Update [this](https://docs.google.com/spreadsheets/d/17GkwckjXf9-SOHWS-RTAXMs0ZKNH2kkr-cO_gQnfGOE/edit#gid=0) sheet.
 2. Follow Instructions in [this](http://timeline.knightlab.com/) link and copy the code snippet.
