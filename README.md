@@ -23,4 +23,4 @@
 
 ### Google Analytics
 
-Check google analytics dashboard [here](https://analytics.google.com/analytics/web/#dashboard).
+Check google analytics dashboard [here]().
