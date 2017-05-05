@@ -1,0 +1,6 @@
+# ignore all files starting with . or ~
+.*
+~*
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
