@@ -614,16 +614,9 @@
                         <p >Member, Software Team</p>
                     </div>
                 </div>
-	<div class="col-sm-3 isotopeItem software">
-                    <div class="team-member">
-                        <img src="images/gaurav_junior.jpg" class="img-responsive " alt="" />
-                        <h4>Aman Modi</h4>
-                        <p >Member, Hardware and Embedded Team</p>
-                    </div>
-                </div>
                 <div class="col-sm-3 isotopeItem software">
                     <div class="team-member">
-                        <img src="images/Aman.jpeg" class="img-responsive " alt="" />
+                        <img src="images/akshat2.jpg" class="img-responsive " alt="" />
                         <h4>Akshat Pandya</h4>
                         <p>Member, Software Team</p>                  
                     </div>
