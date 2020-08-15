@@ -19,10 +19,17 @@ body{
     /* width: 100vh;*/
     opacity: 12%;
 }
+
 .head{
     position: fixed;
+    z-index: 10;
+    background-color: gray;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
-.bghead{
+
+/* .bghead{
     border-bottom: black 1.4px solid;
     display: block;
     position: fixed;
@@ -30,16 +37,16 @@ body{
     right: 0;
     z-index: -2;
     background-color: gray;
-    height: 7vh;
-    opacity: 50%;
-}
+    height: 64px;
+} */
 
 .header{
     z-index: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 7vh;
+    height: 64px;
     /* border: 2px solid black; */
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -52,42 +59,37 @@ body{
     height: 6vh;
 }
 
-
-
 #left{
-    background-image: url('Design/ark.png');
-    background-size: 60px 60px;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 8%;
-    height: 88%;
-    /* border: red 5px solid; */
-}
-#mid{
     text-align: left center;
-    margin-right: auto;
+    padding-left: 5px;
+    /* margin-right: auto; */
     font-weight: lighter;
+    width: 300px;
     /* border: green 5px solid; */
 }
 
-#mid h2{
-    padding-left: 5px;
-    margin-top: 1.6vh;
+#left img{
+    float: left;
+    height: 100%;
+}
+
+#left h2{
+    position: relative;
+    margin: 4px 0;
+    left: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: lighter;
 }
 #right {
-    /* align-content: right; */
-    /* margin-left: auto; */
+    padding-right: 10px;
+    align-content: right;
+    margin-left: auto;
     /* width: 49%; */
     /* border: yellow 5px solid; */
 }
-#filler{
-    width: 20vh;
-    /* visibility: hidden; */
-}
 
 .header ul{
+    margin: 11px 0;
     font-size: large;
     display: flex;
     list-style: none;
@@ -95,8 +97,7 @@ body{
 }
 
 .header ul li{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 12px;
     font-weight: lighter;
 }
 
@@ -112,7 +113,7 @@ body{
 
 .body{
     position: relative;
-    top: 7vh;
+    top: 64px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
