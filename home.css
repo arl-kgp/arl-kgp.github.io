@@ -23,22 +23,24 @@ body{
 .head{
     position: fixed;
     z-index: 10;
-    background-color: gray;
+    background: url('Design/polygon_art_bg-01.jpg');
+    background-size: cover;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-/* .bghead{
+.bghead{
     border-bottom: black 1.4px solid;
     display: block;
     position: fixed;
+    height: 64px;
     left: 0;
     right: 0;
     z-index: -2;
     background-color: gray;
-    height: 64px;
-} */
+    opacity: 75%;
+}
 
 .header{
     z-index: 0;
@@ -121,5 +123,5 @@ body{
 
 .teaser{
     height: 50vh;
-    border: 2px solid black;
+    border-bottom: 0.75px solid grey;
 }
