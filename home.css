@@ -61,7 +61,7 @@ body{
     /* background-color: red; */
     margin: 1px;
     padding: 1px;
-    height: 6vh;
+    height: 64px;
 }
 
 #left{
@@ -69,24 +69,34 @@ body{
     padding-left: 5px;
     /* margin-right: auto; */
     font-weight: lighter;
-    width: 310px;
+    width: 325px;
     /* border: green 5px solid; */
 }
 
 #left img{
     float: left;
-    height: 100%;
+    height: 85%;
 }
 
 #left h2{
     position: relative;
-    margin: 4px 0;
+    margin: 12px 0;
     left: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: lighter;
+    font-weight: normal;
 }
 #right {
-    padding-right: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    align-content: right;
+    margin-left: auto;
+    /* width: 49%; */
+    /* border: yellow 5px solid; */
+}
+
+#right {
+    margin-top: 10px;
+    padding-left: 10px;
     align-content: right;
     margin-left: auto;
     /* width: 49%; */
@@ -102,8 +112,15 @@ body{
 }
 
 .header ul li{
+    padding-right: 50px;
+    font-weight: lighter;
+}
+
+@media (max-width: 992px){
+.header ul li{
     padding-right: 12px;
     font-weight: lighter;
+}
 }
 
 
