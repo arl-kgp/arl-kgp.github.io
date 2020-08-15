@@ -209,3 +209,8 @@ body{
     padding: 5px;
     font-size: large;
 }
+
+#click
+{
+	cursor: pointer;
+}
