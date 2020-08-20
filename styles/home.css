@@ -1,0 +1,15 @@
+body, html{
+    height: 100%;
+}
+
+.bg{
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-image: url('../Design/polygon_art_bg-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    opacity: 12%;
+}
