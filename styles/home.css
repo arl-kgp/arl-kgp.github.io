@@ -76,7 +76,8 @@ nav{
 }
 
 .foot{
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .fleft{
@@ -92,6 +93,7 @@ nav{
 
 @media (min-width: 576px){
     .fleft{
+        text-align: left;
         float: left;
         width: 47.5%;
         box-sizing: border-box;
