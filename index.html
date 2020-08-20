@@ -16,6 +16,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     <title>Aerial Robotics, Kharagpur</title>
 </head>
 
@@ -38,7 +40,7 @@
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
+                    <a class="nav-link" href="/ark-blog">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="achievements.html">Achievements</a>
@@ -158,34 +160,16 @@
         </div>
     </div>
 
-    <div class="footer border-top border-dark">
-        <div class="container foot">
-            <div class="fleft">
-                <h2>Aerial Robotics, Kharagpur</h2>
-                <p>
-                    We are an enthusiastic group of students working
-                    towards building autonomous aerial vehicles, based
-                    at Indian Institute of Technology, Kharagpur.
-                </p>
-                <p>©Aerial Robotics, Kharagpur</p>
-            </div>
-            <div class="fright">
-                <h3> find us on ...</h3>
-                <a href="https://www.facebook.com/aerialroboticskgp/"><i class="fa fa-facebook" aria-hidden="True"></i></a>
-                <a href="https://github.com/arl-kgp"><i class="fa fa-github" aria-hidden="True"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="True"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="True"></i></a>
-                <a href="https://www.youtube.com/channel/UCkEnllRgweDTNePStFnY3BQ"><i class="fa fa-youtube-play" aria-hidden="True"></i></a>
-                <a href="mailto:aerialroboticskharagpur@gmail.com"><i class="fa fa-envelope-o" aria-hidden="True"></i></a>
-            </div>
-        </div>
-    </div>
+    <div id="footer-placeholder"></div>
+    
+    <script>
+    $(function(){
+        $("#footer-placeholder").load("footer.html");
+    });
+    </script>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
