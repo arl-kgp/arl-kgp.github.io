@@ -20,7 +20,7 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    opacity: 12%;
+    opacity: 0.12;
     visibility: visible;
 }
 
@@ -60,7 +60,7 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    opacity: 12%;
+    opacity: 0.12;
     visibility: visible;
 }
 
