@@ -21,6 +21,7 @@ nav{
     background-repeat: no-repeat;
     height: 100%;
     opacity: 12%;
+    visibility: visible;
 }
 
 .navbarfix{
@@ -60,6 +61,7 @@ nav{
     background-repeat: no-repeat;
     height: 100%;
     opacity: 12%;
+    visibility: visible;
 }
 
 .card{
