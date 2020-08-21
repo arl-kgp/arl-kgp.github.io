@@ -16,6 +16,39 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 
+    <style>
+        h1{
+            padding: 20px 0;
+        }
+
+        .row{
+            margin: 25px 0;
+        }
+
+        .form{
+            background-color: lightgray;
+        }
+
+        .map-container-6{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        }
+
+        .map-container-6 iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+        }
+
+        .col-sm-2{
+            padding-bottom: 10px;
+        }
+    </style>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <title>Aerial Robotics Kharagpur | Contact</title>
@@ -61,6 +94,118 @@
 
     <div class="navbarfix"></div>
 
+    <!--Section: Contact v.1-->
+    <section class="section pb-5 Contact Us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Contact Us</h1>
+                    <h6 class="text-muted">You can fill the form to grab our attention or reach us on social media.</p>
+                </div>
+            </div>
+        
+            <div class="row">
+        
+            <!--Grid column-->
+            <div class="col-lg-5 mb-4">
+        
+                <!--Form with header-->
+                <div class="card form">
+        
+                <div class="card-body">
+                    <!--Header-->
+                    <div class="form-header blue accent-1">
+                        <h3><i class="fa fa-envelope"></i> Write to us</h3>
+                    </div>
+        
+                    <p>We'll respond as soon as possible.</p>
+                    <br>
+        
+                    <!--Body-->
+                    <form action="contact.html" method="GET"> <!--NOTE the action and method has to be changed-->
+                        <div class="md-form form-group">
+                            <i class="fa fa-user prefix grey-text"></i>
+                            <label for="form-name">Your name</label>
+                            <input type="text" id="form-name" class="form-control">
+                        </div>
+            
+                        <div class="md-form form-group">
+                            <i class="fa fa-envelope prefix grey-text"></i>
+                            <label for="form-email">Your email</label>
+                            <input type="text" id="form-email" class="form-control">
+                        </div>
+            
+                        <div class="md-form form-group">
+                            <i class="fa fa-tag prefix grey-text"></i>
+                            <label for="form-Subject">Subject</label>
+                            <input type="text" id="form-Subject" class="form-control">
+                        </div>
+            
+                        <div class="md-form form-group">
+                            <i class="fa fa-pencil prefix grey-text"></i>
+                            <label for="form-text">Message</label>
+                            <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
+                        </div>
+            
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+        
+                </div>
+        
+                </div>
+                <!--Form with header-->
+        
+            </div>
+            <!--Grid column-->
+        
+            <!--Grid column-->
+            <div class="col-lg-7">
+        
+                <!--Google map-->
+                <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.9265195103944!2d87.3000321149062!3d22.318618585314073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d44075cb58a6b%3A0x5567f9e6bce3cae5!2sAerial%20Robotics%20Kharagpur!5e0!3m2!1sen!2sin!4v1598035187439!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+        
+                <br>
+                <!--Buttons-->
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <h5>Find us on the following:</h5>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-sm-2">
+                        <a href="https://www.facebook.com/aerialroboticskgp/"><i class="fa fa-facebook fa-2x" aria-hidden="True"></i></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="https://github.com/arl-kgp"><i class="fa fa-github fa-2x" aria-hidden="True"></i></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="True"></i></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="True"></i></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="https://www.youtube.com/channel/UCkEnllRgweDTNePStFnY3BQ"><i class="fa fa-youtube-play fa-2x" aria-hidden="True"></i></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="mailto:aerialroboticskharagpur@gmail.com"><i class="fa fa-envelope-o fa-2x" aria-hidden="True"></i></a>
+                    </div>
+        
+                </div>
+        
+            </div>
+            <!--Grid column-->
+        
+            </div>
+        </div>
+  
+  </section>
+  <!--Section: Contact v.1-->
 
     <div id="footer-placeholder"></div>
     
