@@ -67,10 +67,12 @@ nav{
     background: none;
 
 }
+
 .bg-dark {
     margin-top: -0.8px;
     background-color: #53585d!important;
 }
+
 @media screen and (max-width: 768px) {
     .media { 
         display: block;
@@ -128,7 +130,7 @@ nav{
     text-align: center;
 }
 
-@media (max-width: 576px){
+@media (min-width: 576px){
     .fleft{
         text-align: left;
         float: left;
@@ -144,8 +146,6 @@ nav{
         box-sizing: border-box;
     }
 }
-
-
 
 .fright i{
     padding: 5px;
