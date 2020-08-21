@@ -65,6 +65,43 @@ nav{
 .card{
     overflow: hidden;
     background: none;
+
+}
+.bg-dark {
+    margin-top: -0.8px;
+    background-color: #53585d!important;
+}
+@media screen and (max-width: 768px) {
+    .media { 
+        display: block;
+    }
+    
+    .cardimg{
+        display: flex;
+        justify-content: center;
+    }
+    img.ml-3{
+        margin-top: 2%;
+        margin-left: 0%!important;
+    }
+
+
+}
+@media screen and (max-width: 425px) {
+    .media { 
+        display: block;
+    }
+    
+    .cardimg{
+        display: flex;
+        justify-content: center;
+    }
+    img.ml-3{
+        max-width: 100%;
+        margin-top: 4%;
+    }
+
+
 }
 
 .footer{
@@ -91,7 +128,7 @@ nav{
     text-align: center;
 }
 
-@media (min-width: 576px){
+@media (max-width: 576px){
     .fleft{
         text-align: left;
         float: left;
@@ -107,6 +144,8 @@ nav{
         box-sizing: border-box;
     }
 }
+
+
 
 .fright i{
     padding: 5px;
