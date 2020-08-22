@@ -1,0 +1,137 @@
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.65;
+    z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('../Design/cover.png') black no-repeat center center scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    header video {
+        display: none;
+    }
+}
+
+#introduction .row{
+    margin: 30px 0;
+}
+
+#introduction p{
+    display: block;
+    font-size: larger;
+    padding: 5px;
+    margin: auto;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#teasers .card{
+    margin: 35px 0;
+    border: none;
+}
+
+#teasers .media-body{
+    text-align: center;
+    justify-content: center;
+}
+
+#teasers .cardimg{
+    justify-content: center;
+    text-align: center;
+}
+
+.hack{
+    display: none;
+}
+
+.left{
+    display: inline-block;
+}
+
+@media screen and (max-width: 992px) {
+    .media { 
+        display: block;
+    }
+    
+    .cardimg{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    img.ml-3{
+        width: auto;
+        margin-top: 2%;
+        margin-left: 0%!important;
+    }
+
+    .left{
+        display: none;
+    }
+
+    .hack{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .media { 
+        display: block;
+    }
+    
+    .cardimg{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    img.ml-3{
+        max-width: 100%;
+        margin-top: 4%;
+    }
+
+    .left{
+        display: none;
+    }
+
+    .hack{
+        display: inline-block;
+    }
+}
