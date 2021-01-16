@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
+
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -22,6 +22,21 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" size="96x96" href="Design/favicon-96x96.png">
+
+    <style>
+        .space {
+            height: 2em;
+        }
+        .newcard{
+            margin-top: 2%;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+        .imgspace{
+            margin:5%;
+            margin-left: 10%;
+        }
+    </style>
 
 </head>
 
@@ -42,7 +57,7 @@
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">home<span class="sr-only">(current)</span></a>
-                </li>   
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="projects.html">projects<span class="sr-only">(current)</span></a>
                 </li>
@@ -64,23 +79,165 @@
 
     <div class="navbarfix"></div>
 
+    <div class="card text-center">
+        <div class="card-header">
+            <h2>
+                Our Projects
+            </h2>
+        </div>
 
-    <div id="footer-placeholder"></div>
-    
-    <script>
-    $(function(){
-        $("#footer-placeholder").load("footer.html");
-    });
-    </script>
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+        <div class="newcard">
+            <div class="card mb-3" style="max-width: 200%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="Design/archi.png" height="300" alt="" class="imgspace">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title">Overall</h4>
+                            <p class="card-text">
+                                ARK aims to develop a flexible aerial robotics framework which can be easily used to control
+                                aerial
+                                vehicles. Eventually, we want to move to multiple decentralised aerial robot swarms in an
+                                outdoors
+                                setting.
+                                <br>
+                                Currently, we have designed an architecture for IARC which we plan to optimise iteratively for
+                                participation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="newcard">
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                  <h4 class="card-title">Software</h4>
+                  <p class="card-text">
+                    The software team is responsible for developing algorithms in computer vision including localisation, object detection, tracking, path planning and 3D obstacle avoidance along with artifical intelligence algorithms for exploration and herding. Current Areas of focus are:
+                  </p>
+                  <div class="card text-center">
+                    <div class="card-header">
+                      <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="true" href="#">Object Detection and Tracking</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Ground Truth Validation</a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+
+                  <div class="space"></div>
+                  <div class="card text-center">
+                      <div class="card-header">
+                          <ul class="nav nav-tabs card-header-tabs">
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">Grid Base localisation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Optical Flow localisation</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                    
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Herding Simulation</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Simulation Platform on Gazebo</a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="newcard">
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                  <h4 class="card-title">Control</h4>
+                  <p class="card-text">
+                    The Controls Team aims towards a smooth motion of the aerial robot in space and that they attain the desired speed and orientation avoiding obstacles. Current research includes:
+                  </p>
+                  <div class="card text-center">
+                    <div class="card-header">
+                      <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="true" href="#">Two Layered PID</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Low Level Controller</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Self Estimation</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Self Estimation</a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>                    
+                    
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+
+
+
+
+        <div id="footer-placeholder"></div>
+
+        <script>
+            $(function () {
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
