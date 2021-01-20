@@ -11,6 +11,12 @@ nav{
     background-color: gray;
 }
 
+header{
+    position: relative;
+    top: -1px;
+}
+
+
 .bg-nav{
     z-index: -1;
     position: absolute;
@@ -89,6 +95,7 @@ nav{
 .foot{
     padding-top: 50px;
     padding-bottom: 50px;
+    /* vertical-align: middle; */
 }
 
 .fleft{
@@ -111,10 +118,13 @@ nav{
     }
 
     .fright{
-        text-align: right;
+        /* text-align: right; */
+        justify-content: center;
         position: relative;
+        top: 30%;
         float: right;
         width: 47.5%;
+        width: 25%;
         box-sizing: border-box;
     }
 }
@@ -138,3 +148,17 @@ nav{
     display: inline;
 	cursor: pointer;
 }
+
+.icon-center{
+    /* border: solid 2px red; */
+    justify-content: center;
+}
+
+.col-sm-2{
+    /* border: 2px solid red; */
+    text-align: center;
+}
+
+/* .fa{
+    /* border: 2px solid red; */
+} */
