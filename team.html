@@ -37,9 +37,98 @@
             display: block;
         }
 
+        .levelDiv{
+            display: none;
+        }
+
+        .levelDiv.show{
+            display: block;
+        }
+
+        .level-header{
+            width: 100%;
+            text-align: center;
+            margin: 10px 0 5px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
         .card{
-            background-color: lightgray;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
             margin-bottom: 25px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover{
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+        }
+
+        .card-img-top{
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 18px auto 0;
+            border: 3px solid #f0f0f0;
+        }
+
+        .card-body{
+            padding: 0.9rem;
+        }
+
+        .card-title{
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-text{
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-icons a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            margin: 0 4px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 14px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .social-icons a:hover{
+            background-color: #0056b3;
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        .team-header{
+            width: 100%;
+            text-align: center;
+            margin: 40px 0 5px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        .team-header:first-child{
+            margin-top: 0;
         }
 
         .small-s{
@@ -90,7 +179,7 @@
                     <a class="nav-link" href="index.html">home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="projects.html">projects</a>
+                    <a class="nav-link" href="projects.html">projects and competitions</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="achievements.html">achievements</a>
@@ -118,7 +207,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>Our Team</h1>
-                    <h6 class="text-muted">Our team is divided in to mainly 4 sub teams: Software, controls, embedded and hardware.</p>
+                    <h6 class="text-muted">Our team is divided in to mainly 4 sub teams: perception, controls, embedded and mechanical.</p>
                 </div>
             </div>
 
@@ -133,10 +222,11 @@
                             <a class="dropdown-item team-item" href="#" onclick="filterSelection('all')">all</a>
                             <a class="dropdown-item team-item" href="#" onclick="filterSelection('prof')">professors</a>
                             <a class="dropdown-item team-item" href="alumni.html">alumni</a>
-                            <a class="dropdown-item team-item" href="#" onclick="filterSelection('software')">software</a>
+                            <a class="dropdown-item team-item" href="#" onclick="filterSelection('perception')">perception</a>
                             <a class="dropdown-item team-item" href="#" onclick="filterSelection('controls')">controls</a>
                             <a class="dropdown-item team-item" href="#" onclick="filterSelection('embedded')">embedded</a>
-                            <a class="dropdown-item team-item" href="#" onclick="filterSelection('hardware')">hardware</a>
+                            <a class="dropdown-item team-item" href="#" onclick="filterSelection('mechanical')">mechanical</a>
+                            <a class="dropdown-item team-item" href="#" onclick="filterSelection('advisors')">advisors</a>
                         </div>
                     </div>
                 </div>
@@ -150,340 +240,525 @@
                             <li class="page-item team-item disabled"><a class="page-link" href="#" onclick="filterSelection('all')">all</a></li>
                             <li class="page-item team-item"><a class="page-link" href="#" onclick="filterSelection('prof')">professors</a></li>
                             <li class="page-item team-item"><a class="page-link" href="alumni.html">alumni</a></li>
-                            <li class="page-item team-item"><a class="page-link" href="#" onclick="filterSelection('software')">software</a></li>
+                            <li class="page-item team-item"><a class="page-link" href="#" onclick="filterSelection('perception')">perception</a></li>
                             <li class="page-item team-item"><a class="page-link" href="#" onclick="filterSelection('controls')">controls</a></li>
                             <li class="page-item team-item"><a class="page-link" href="#" onclick="filterSelection('embedded')">embedded</a></li>
-                            <li class="page-item team-item"><a class="page-link" href="#" onclick="filterSelection('hardware')">hardware</a></li>
+                            <li class="page-item team-item"><a class="page-link" href="#" onclick="filterSelection('mechanical')">mechanical</a></li>
+                            <li class="page-item team-item"><a class="page-link" href="#" onclick="filterSelection('advisors')">advisors</a></li>
                         </ul>
                       </nav>
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
 
-                <div class="col-md-4 filterDiv prof">
+                <!-- ================= PROFESSORS ================= -->
+                <div class="col-12 filterDiv prof team-header">Professors</div>
+
+                <div class="col-md-3 filterDiv prof">
                     <div class="card">
                         <img src="./team/somesh.jpg" class="card-img-top" alt="Prof. Somesh Kumar">
                         <div class="card-body">
                             <h5 class="card-title">Prof. Somesh Kumar</h5>
                             <p class="card-text">Principal Investigator, Department of Mathematics</p>
-                            <a href="http://www.facweb.iitkgp.ernet.in/~smsh/" class="btn btn-primary">Profile</a>
+                            <div class="social-icons">
+                                <a href="http://www.facweb.iitkgp.ernet.in/~smsh/" title="Profile" target="_blank"><i class="fa fa-user"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv prof">
+                <div class="col-md-3 filterDiv prof">
+                    <div class="card">
+                        <img src="./team/saha.jpg" class="card-img-top" alt="Prof. Sandeep Saha">
+                        <div class="card-body">
+                            <h5 class="card-title">Prof. Sandeep Saha</h5>
+                            <p class="card-text">Co Principal Investigator, Department of Aerospace Engineering</p>
+                            <div class="social-icons">
+                                <a href="https://ssaha-aero.github.io/TAILWIND-Lab/" title="Profile" target="_blank"><i class="fa fa-user"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv prof">
                     <div class="card">
                         <img src="./team/jayanta.jpg" class="card-img-top" alt="Prof. Jayanta Mukhopadhyay">
                         <div class="card-body">
                             <h5 class="card-title">Prof. Jayanta Mukhopadhyay</h5>
                             <p class="card-text">Mentor, Department of Computer Science & Engineering</p>
-                            <a href="http://www.facweb.iitkgp.ernet.in/~jay/" class="btn btn-primary">Profile</a>
+                            <div class="social-icons">
+                                <a href="http://www.facweb.iitkgp.ernet.in/~jay/" title="Profile" target="_blank"><i class="fa fa-user"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv prof">
+                <div class="col-md-3 filterDiv prof">
                     <div class="card">
                         <img src="./team/dkp.jpg" class="card-img-top" alt="Prof. Dilip Kumar Pratihar">
                         <div class="card-body">
                             <h5 class="card-title">Prof. Dilip Kumar Pratihar</h5>
                             <p class="card-text">Mentor, Department of Mechanical Engineering</p>
-                            <a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=bUmdQ" class="btn btn-primary">Profile</a>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/manash.jpg" class="card-img-top" alt="Manash Pratim Das">
-                        <div class="card-body">
-                            <h5 class="card-title">Manash Pratim Das</h5>
-                            <p class="card-text">Head, Software Team</p>
-                            <a href="http://manashpratim.in/" class="btn btn-primary">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/sourish.jpg" class="card-img-top" alt="Sourish Ghosh">
-                        <div class="card-body">
-                            <h5 class="card-title">Sourish Ghosh</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="http://sourishghosh.com/" class="btn btn-primary">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/ashwary.jpg" class="card-img-top" alt="Ashwary Anand">
-                        <div class="card-body">
-                            <h5 class="card-title">Ashwary Anand</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv controls">
-                    <div class="card">
-                        <img src="./team/aman.jpg" class="card-img-top" alt="Aman Chandra">
-                        <div class="card-body">
-                            <h5 class="card-title">Aman Chandra</h5>
-                            <p class="card-text">Member, Controls Team</p>
-                            <a href="https://amanchandra333.github.io" class="btn btn-primary">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv controls">
-                    <div class="card">
-                        <img src="./team/amitPathak.jpg" class="card-img-top" alt="Amit Kumar Pathak">
-                        <div class="card-body">
-                            <h5 class="card-title">Amit Kumar Pathak</h5>
-                            <p class="card-text">Member, Controls Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv controls">
-                    <div class="card">
-                        <img src="./team/kris.jpg" class="card-img-top" alt="Krishnakant Deshmukh">
-                        <div class="card-body">
-                            <h5 class="card-title">Krishnakant Deshmukh</h5>
-                            <p class="card-text">Member, Controls Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv controls">
-                    <div class="card">
-                        <img src="./team/Shivang.jpg" class="card-img-top" alt="Shivang Agrawal">
-                        <div class="card-body">
-                            <h5 class="card-title">Shivang Agrawal</h5>
-                            <p class="card-text">Member, Controls Team</p>
-                            <a href="http://shivangagrawal.in" class="btn btn-primary">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv controls">
-                    <div class="card">
-                        <img src="./team/vivek.jpg" class="card-img-top" alt="Vivek Mudgal">
-                        <div class="card-body">
-                            <h5 class="card-title">Vivek Mudgal</h5>
-                            <p class="card-text">Member, Controls Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/Gaurav_Junior.jpg" class="card-img-top" alt="Gaurav Suryawanshi">
-                        <div class="card-body">
-                            <h5 class="card-title">Gaurav Suryawanshi</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv hardware">
-                    <div class="card">
-                        <img src="./team/Akshay.jpg" class="card-img-top" alt="Akshay Jain">
-                        <div class="card-body">    
-                            <h5 class="card-title">Akshay Jain</h5>
-                            <p class="card-text">Member, Hardware Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/akshat2.jpg" class="card-img-top" alt="Akshat Pandya">
-                        <div class="card-body">
-                            <h5 class="card-title">Akshat Pandya</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/manad.jpeg" class="card-img-top" alt="Manad Mishra">
-                        <div class="card-body">
-                            <h5 class="card-title">Manad Mishra</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv controls">
-                    <div class="card">
-                        <img src="./team/aditi.jpg" class="card-img-top" alt="Aditi Singh">
-                        <div class="card-body">
-                            <h5 class="card-title">Aditi Singh</h5>
-                            <p class="card-text">Member, Controls Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/praneet.jpg" class="card-img-top" alt="Praneet jain">
-                        <div class="card-body">
-                            <h5 class="card-title">Praneet jain</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv hardware embedded">
-                    <div class="card">
-                        <img src="./team/aman_modi.jpg" class="card-img-top" alt="Aman Modi">
-                        <div class="card-body">    
-                            <h5 class="card-title">Aman Modi</h5>
-                            <p class="card-text">Member, Hardware and Embedded</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/anvee.jpg" class="card-img-top" alt="Anvee Naik">
-                        <div class="card-body">
-                            <h5 class="card-title">Anvee Naik</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/shubhika.jpg" class="card-img-top" alt="Shubhika Garg">
-                        <div class="card-body">
-                            <h5 class="card-title">Shubhika Garg</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/vidit.jpg" class="card-img-top" alt="Vidit Goel">
-                        <div class="card-body">
-                            <h5 class="card-title">Vidit Goel</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv controls">
-                    <div class="card">
-                        <img src="./team/PalakHarwani.jpg" class="card-img-top" alt="Palak Harwani">
-                        <div class="card-body">
-                            <h5 class="card-title">Palak Harwani</h5>
-                            <p class="card-text">Member, Controls Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/aryan.jpg" class="card-img-top" alt="Aryan Jaiswal">
-                        <div class="card-body">
-                            <h5 class="card-title">Aryan Jaiswal</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/Biswajit.jpg" class="card-img-top" alt="Biswajit Ghosh">
-                        <div class="card-body">
-                            <h5 class="card-title">Biswajit Ghosh</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv software">
-                    <div class="card">
-                        <img src="./team/Parakh.jpg" class="card-img-top" alt="Parakh Agarwal">
-                        <div class="card-body">
-                            <h5 class="card-title">Parakh Agarwal</h5>
-                            <p class="card-text">Member, Software Team</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 filterDiv hardware embedded">
-                    <div class="card">
-                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Abhinav Ukey">
-                        <div class="card-body">    
-                            <h5 class="card-title">Abhinav Ukey</h5>
-                            <p class="card-text">Member, Hardware and Embedded</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                            <div class="social-icons">
+                                <a href="http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=bUmdQ" title="Profile" target="_blank"><i class="fa fa-user"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PLACEHOLDERS FOR REFERENCE -->
-                <!-- <div class="col-md-4 filterDiv prof">
+                <!-- ================= PERCEPTION TEAM ================= -->
+                <div class="col-12 filterDiv perception team-header">Perception Team</div>
+
+                <div class="w-100 filterDiv perception"></div>
+                <div class="col-12 levelDiv perception level-header">Heads</div>
+                <div class="col-md-3 filterDiv perception">
                     <div class="card">
-                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="placeholder-person">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Ajsal Ali">
                         <div class="card-body">
-                            <h5 class="card-title">Name Professor</h5>
-                            <p class="card-text">Team description</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                            <h5 class="card-title">Ajsal Ali</h5>
+                            <p class="card-text">Head, Perception Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni">
+                <div class="col-md-3 filterDiv perception">
                     <div class="card">
-                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="placeholder-person">
+                        <img src="./team/phanse.jpeg" class="card-img-top" alt="Ishan Phanse">
                         <div class="card-body">
-                            <h5 class="card-title">Name Alumni</h5>
-                            <p class="card-text">Team description</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                            <h5 class="card-title">Ishan Phanse</h5>
+                            <p class="card-text">Head, Perception Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv software">
+
+                <div class="w-100 filterDiv perception"></div>
+                <div class="col-12 levelDiv perception level-header">Members</div>
+                <div class="col-md-3 filterDiv perception">
                     <div class="card">
-                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="placeholder-person">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Raghu Perala">
                         <div class="card-body">
-                            <h5 class="card-title">Name Software</h5>
-                            <p class="card-text">Team description</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                            <h5 class="card-title">Raghu Perala</h5>
+                            <p class="card-text">Member, Perception Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv controls">
+                <div class="col-md-3 filterDiv perception">
                     <div class="card">
-                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="placeholder-person">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Sritoma Nandan">
                         <div class="card-body">
-                            <h5 class="card-title">Name Controls</h5>
-                            <p class="card-text">Team description</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                            <h5 class="card-title">Sritoma Nandan</h5>
+                            <p class="card-text">Member, Perception Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv embedded">
+                <div class="col-md-3 filterDiv perception">
                     <div class="card">
-                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="placeholder-person">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Avi Gupta">
                         <div class="card-body">
-                            <h5 class="card-title">Name Embedded</h5>
-                            <p class="card-text">Team description</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                            <h5 class="card-title">Avi Gupta</h5>
+                            <p class="card-text">Member, Perception Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv hardware">
+                <div class="col-md-3 filterDiv perception">
                     <div class="card">
-                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="placeholder-person">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Parth Bhardwaj">
                         <div class="card-body">
-                            <h5 class="card-title">Name Hardware</h5>
-                            <p class="card-text">Team description</p>
-                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                            <h5 class="card-title">Parth Bhardwaj</h5>
+                            <p class="card-text">Member, Perception Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
+                <div class="col-md-3 filterDiv perception">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Aryan Kumar">
+                        <div class="card-body">
+                            <h5 class="card-title">Aryan Kumar</h5>
+                            <p class="card-text">Member, Perception Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= CONTROLS TEAM ================= -->
+                <div class="col-12 filterDiv controls team-header">Controls Team</div>
+
+                <div class="w-100 filterDiv controls"></div>
+                <div class="col-12 levelDiv controls level-header">Heads</div>
+                <div class="col-md-3 filterDiv controls">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Ved Takte">
+                        <div class="card-body">
+                            <h5 class="card-title">Ved Takte</h5>
+                            <p class="card-text">Head, Controls Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv controls">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Shrreya Rajneesh">
+                        <div class="card-body">
+                            <h5 class="card-title">Shrreya Rajneesh</h5>
+                            <p class="card-text">Head, Controls Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv controls">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Pranjal Sinha">
+                        <div class="card-body">
+                            <h5 class="card-title">Pranjal Sinha</h5>
+                            <p class="card-text">Head, Controls Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 filterDiv controls"></div>
+                <div class="col-12 levelDiv controls level-header">Members</div>
+                <div class="col-md-3 filterDiv controls">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Adya Singh">
+                        <div class="card-body">
+                            <h5 class="card-title">Adya Singh</h5>
+                            <p class="card-text">Member, Controls Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv controls">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Priyansu Dash">
+                        <div class="card-body">
+                            <h5 class="card-title">Priyansu Dash</h5>
+                            <p class="card-text">Member, Controls Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv controls">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Srushti Chandorkar">
+                        <div class="card-body">
+                            <h5 class="card-title">Srushti Chandorkar</h5>
+                            <p class="card-text">Member, Controls Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv controls">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Raghav Nirmal Toshniwal">
+                        <div class="card-body">
+                            <h5 class="card-title">Raghav Nirmal Toshniwal</h5>
+                            <p class="card-text">Member, Controls Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv controls">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Aneesh Lade">
+                        <div class="card-body">
+                            <h5 class="card-title">Aneesh Lade</h5>
+                            <p class="card-text">Member, Controls Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv controls">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Piyush Dubey">
+                        <div class="card-body">
+                            <h5 class="card-title">Piyush Dubey</h5>
+                            <p class="card-text">Member, Controls Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= EMBEDDED TEAM ================= -->
+                <div class="col-12 filterDiv embedded team-header">Embedded Team</div>
+
+                <div class="w-100 filterDiv embedded"></div>
+                <div class="col-12 levelDiv embedded level-header">Heads</div>
+                <div class="col-md-3 filterDiv embedded">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Devansh Gupta">
+                        <div class="card-body">
+                            <h5 class="card-title">Devansh Gupta</h5>
+                            <p class="card-text">Head, Embedded Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv embedded">
+                    <div class="card">
+                        <img src="./team/adigupta.jpeg" class="card-img-top" alt="Aditya Gupta">
+                        <div class="card-body">
+                            <h5 class="card-title">Aditya Gupta</h5>
+                            <p class="card-text">Head, Embedded Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 filterDiv embedded"></div>
+                <div class="col-12 levelDiv embedded level-header">Members</div>
+                <div class="col-md-3 filterDiv embedded">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Ankit Kumar">
+                        <div class="card-body">
+                            <h5 class="card-title">Ankit Kumar</h5>
+                            <p class="card-text">Member, Embedded Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= MECHANICAL TEAM ================= -->
+                <div class="col-12 filterDiv mechanical team-header">Mechanical Team</div>
+
+                <div class="w-100 filterDiv mechanical"></div>
+                <div class="col-12 levelDiv mechanical level-header">Heads</div>
+                <div class="col-md-3 filterDiv mechanical">
+                    <div class="card">
+                        <img src="./team/manodipan.jpg" class="card-img-top" alt="Manodipan Mahakuda">
+                        <div class="card-body">
+                            <h5 class="card-title">Manodipan Mahakuda</h5>
+                            <p class="card-text">Head, Mechanical Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="manodipan.mahakuda@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv mechanical">
+                    <div class="card">
+                        <img src="./team/krushnashish.jpg" class="card-img-top" alt="Krushnashish Pradhan">
+                        <div class="card-body">
+                            <h5 class="card-title">Krushnashish Pradhan</h5>
+                            <p class="card-text">Head, Mechanical Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 filterDiv mechanical"></div>
+                <div class="col-12 levelDiv mechanical level-header">Members</div>
+                <div class="col-md-3 filterDiv mechanical">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Viraj Venkariya">
+                        <div class="card-body">
+                            <h5 class="card-title">Viraj Venkariya</h5>
+                            <p class="card-text">Member, Mechanical Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv mechanical">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Prithvik Premkumar">
+                        <div class="card-body">
+                            <h5 class="card-title">Prithvik Premkumar</h5>
+                            <p class="card-text">Member, Mechanical Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv mechanical">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Adi S Jain">
+                        <div class="card-body">
+                            <h5 class="card-title">Adi S Jain</h5>
+                            <p class="card-text">Member, Mechanical Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv mechanical">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Tarun Achari">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarun Achari</h5>
+                            <p class="card-text">Member, Mechanical Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv mechanical">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Praneet Dixit">
+                        <div class="card-body">
+                            <h5 class="card-title">Praneet Dixit</h5>
+                            <p class="card-text">Member, Mechanical Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv mechanical">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Harsh Gupta">
+                        <div class="card-body">
+                            <h5 class="card-title">Harsh Gupta</h5>
+                            <p class="card-text">Member, Mechanical Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv mechanical">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Yugam Jain">
+                        <div class="card-body">
+                            <h5 class="card-title">Yugam Jain</h5>
+                            <p class="card-text">Member, Mechanical Team</p>
+                            <div class="social-icons">
+                                <!-- TODO: replace # with mailto:address -->
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ADVISORS (teamless, shown only in "all" and "advisors" tabs, always last) ================= -->
+                <div class="col-12 filterDiv advisors team-header">Advisors</div>
+
+                <div class="col-md-3 filterDiv advisors">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Advisor placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Advisor Name</h5>
+                            <p class="card-text">Advisor, Perception Team</p>
+                            <div class="social-icons">
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                                <a href="#" title="Profile" target="_blank"><i class="fa fa-user"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv advisors">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Advisor placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Advisor Name</h5>
+                            <p class="card-text">Advisor, Controls Team</p>
+                            <div class="social-icons">
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                                <a href="#" title="Profile" target="_blank"><i class="fa fa-user"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv advisors">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Advisor placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Advisor Name</h5>
+                            <p class="card-text">Advisor, Embedded Team</p>
+                            <div class="social-icons">
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                                <a href="#" title="Profile" target="_blank"><i class="fa fa-user"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv advisors">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Advisor placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Advisor Name</h5>
+                            <p class="card-text">Advisor, Mechanical Team</p>
+                            <div class="social-icons">
+                                <a href="#" title="Email"><i class="fa fa-envelope"></i></a>
+                                <a href="#" title="Profile" target="_blank"><i class="fa fa-user"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -502,12 +777,19 @@
     <script>
         filterSelection("all")
         function filterSelection(c) {
-        var x, i;
+        var x, y, i;
         x = document.getElementsByClassName("filterDiv");
         if (c == "all") c = "";
         for (i = 0; i < x.length; i++) {
             RemoveClass(x[i], "show");
             if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+        }
+
+        // level headers (Heads/Members) only show inside a single team's tab, never in "all"
+        y = document.getElementsByClassName("levelDiv");
+        for (i = 0; i < y.length; i++) {
+            RemoveClass(y[i], "show");
+            if (c !== "" && y[i].className.indexOf(c) > -1) AddClass(y[i], "show");
         }
         }
         

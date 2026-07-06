@@ -63,6 +63,91 @@
       background-color: lightgray;
       margin-bottom: 25px;
     }
+
+    /* ===== Competitions (sorted by date) ===== */
+    .comp-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      margin: 20px 0 40px;
+    }
+
+    .comp-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      padding: 15px;
+      cursor: pointer;
+      width: 260px;
+      text-align: left;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .comp-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .comp-card img.comp-thumb {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .comp-card h5 {
+      margin-bottom: 4px;
+    }
+
+    .comp-card .comp-year {
+      color: #777;
+      font-size: 0.85rem;
+      margin-bottom: 0;
+    }
+
+    .comp-carousel img {
+      width: 100%;
+      max-height: 60vh;
+      object-fit: contain;
+      background: #000;
+      border-radius: 8px;
+    }
+
+    .comp-links {
+      margin-top: 20px;
+    }
+
+    .comp-links .comp-links-label {
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .comp-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .comp-links a:hover {
+      background-color: #0056b3;
+      color: #fff;
+      text-decoration: none;
+      transform: translateY(-3px);
+    }
   </style>
 
 </head>
@@ -86,7 +171,7 @@
           <a class="nav-link" href="index.html">home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="projects.html">projects<span class="sr-only">(current)</span></a>
+          <a class="nav-link active" href="projects.html">projects and competitions<span class="sr-only">(current)</span></a>
         </li>
         <!-- <li class="nav-item">
                     <a class="nav-link" href="achievements.html">achievements</a>
@@ -108,6 +193,18 @@
   </nav>
 
   <div class="navbarfix"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1>Competitions</h1>
+      </div>
+    </div>
+
+    <div class="comp-grid" id="comp-grid"></div>
+  </div>
+
+  <div id="comp-modals"></div>
 
   <div class="container">
     <div class="row">
@@ -267,9 +364,6 @@
   </div>
 
 
-
-
-
   <div id="footer-placeholder"></div>
 
   <script>
@@ -286,6 +380,153 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+
+  <!-- Competitions data, add a new object here (and drop matching images in
+       Design/competitions/<id>/, with the first image as the thumbnail) to add
+       another competition. They're auto-sorted by "date" (newest first). -->
+  <script>
+    const competitions = [
+      {
+        id: "aiaa-dbf",
+        name: "AIAA Design Build Fly",
+        year: "2025-26",
+        date: "2026-04-01",
+        images: [
+          "Design/competitions/aiaa-dbf/1.jpeg",
+          "Design/competitions/aiaa-dbf/2.jpeg",
+          "Design/competitions/aiaa-dbf/3.jpeg",
+          "Design/competitions/aiaa-dbf/4.jpeg"
+        ],
+        description: "<p>The 30th AIAA Design/Build/Fly (DBF) is a major international aerospace engineering competition that selects 100 teams annually to design, construct, and test innovative UAVs.</p>" +
+          "<p>This year's challenge, the \"Banner Towing Bush Plane,\" required building an electric, remote-controlled aircraft. The aircraft had to succeed in performing a Charter Flight, carrying distinct passenger and cargo payloads, and a Banner Flight, deploying and releasing an external banner. The competition was held at the Textron Aviation Employees' Flying Club in Wichita, Kansas, USA.</p>" +
+          "<p>We competed with institutions such as the Massachusetts Institute of Technology (MIT), the University of California, Los Angeles (UCLA), and the University of Sydney, to name a few. <strong>We ranked 39th globally and 5th in Asia, out of 89 teams.</strong></p>",
+        links: [
+          { url: "https://www.instagram.com/p/DXpcveck23Q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+          { url: "https://www.youtube.com/live/A5Qnqu1VCVQ?si=Plu3UPzyP2B7Co8o&t=26003" }
+        ]
+      },
+      {
+        id: "interiit-lat",
+        name: "LAT Aerospace Problem Statement, Inter IIT Tech Meet 14.0",
+        year: "2025",
+        date: "2025-01-01",
+        images: [
+          "Design/competitions/interiit-lat/1.jpeg",
+          "Design/competitions/interiit-lat/2.jpeg",
+          "Design/competitions/interiit-lat/3.jpeg",
+          "Design/competitions/interiit-lat/4.jpeg",
+          "Design/competitions/interiit-lat/5.jpeg"
+        ],
+        description: "<p>Inter IIT Tech Meet 14.0, LAT Aerospace problem statement.</p>",
+        links: []
+      },
+      {
+        id: "ideaforge-2024",
+        name: "ideaForge Problem Statement, Inter IIT Tech Meet 13.0",
+        year: "2024",
+        date: "2024-01-01",
+        images: [
+          "Design/competitions/ideaforge-2024/1.jpeg"
+        ],
+        description: "<p>Inter IIT Tech Meet 13.0, ideaForge problem statement.</p>",
+        links: [
+          { url: "https://www.instagram.com/reel/DICCMt5SRZ8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" }
+        ]
+      },
+      {
+        id: "boeing-aeromodelling-2025",
+        name: "The Boeing Aeromodelling Competition",
+        year: "2025",
+        date: "2025-06-01",
+        images: [
+          "Design/competitions/boeing-aeromodelling-2025/1.jpeg"
+        ],
+        description: "<p>The Boeing Aeromodelling Competition 2025 was a national aerospace engineering competition where student teams developed radio-controlled aircraft for precision payload delivery.</p>" +
+          "<p>Held in Bengaluru, the 2025 challenge required teams to transport and accurately release payloads into designated target zones.</p>" +
+          "<p><strong>Our team secured the Bronze Medal, finishing 3rd nationally.</strong></p>",
+        links: []
+      }
+    ];
+
+    function iconForUrl(url) {
+      if (/instagram\.com/i.test(url)) return "fa-instagram";
+      if (/youtube\.com|youtu\.be/i.test(url)) return "fa-youtube-play";
+      if (/twitter\.com|x\.com/i.test(url)) return "fa-twitter";
+      if (/linkedin\.com/i.test(url)) return "fa-linkedin";
+      return "fa-link";
+    }
+
+    function renderCompetitions() {
+      var grid = document.getElementById("comp-grid");
+      var modalsContainer = document.getElementById("comp-modals");
+
+      var sorted = competitions.slice().sort(function (a, b) {
+        return new Date(b.date) - new Date(a.date);
+      });
+
+      sorted.forEach(function (comp) {
+        var card = document.createElement("div");
+        card.className = "comp-card";
+        card.setAttribute("data-toggle", "modal");
+        card.setAttribute("data-target", "#compModal-" + comp.id);
+        card.innerHTML =
+          '<img src="' + comp.images[0] + '" class="comp-thumb" alt="' + comp.name + '">' +
+          '<h5>' + comp.name + '</h5>' +
+          '<p class="comp-year">' + comp.year + '</p>';
+        grid.appendChild(card);
+
+        var carouselId = "compCarousel-" + comp.id;
+        var slidesHtml = comp.images.map(function (src, i) {
+          return '<div class="carousel-item' + (i === 0 ? ' active' : '') + '">' +
+            '<img src="' + src + '" alt="' + comp.name + '">' +
+            '</div>';
+        }).join("");
+        var indicatorsHtml = comp.images.map(function (_, i) {
+          return '<li data-target="#' + carouselId + '" data-slide-to="' + i + '"' + (i === 0 ? ' class="active"' : '') + '></li>';
+        }).join("");
+
+        var linksHtml = "";
+        if (comp.links && comp.links.length) {
+          linksHtml = '<div class="comp-links">' +
+            '<div class="comp-links-label">Related Links</div>' +
+            comp.links.map(function (l) {
+              return '<a href="' + l.url + '" target="_blank" title="Related Link"><i class="fa ' + iconForUrl(l.url) + '"></i></a>';
+            }).join("") +
+            '</div>';
+        }
+
+        var modal = document.createElement("div");
+        modal.className = "modal fade";
+        modal.id = "compModal-" + comp.id;
+        modal.setAttribute("tabindex", "-1");
+        modal.innerHTML =
+          '<div class="modal-dialog modal-lg modal-dialog-centered">' +
+          '<div class="modal-content">' +
+          '<div class="modal-header">' +
+          '<h5 class="modal-title">' + comp.name + ' <small class="text-muted">(' + comp.year + ')</small></h5>' +
+          '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+          '</div>' +
+          '<div class="modal-body">' +
+          comp.description +
+          '<div id="' + carouselId + '" class="carousel slide comp-carousel" data-ride="false" data-interval="false">' +
+          '<ol class="carousel-indicators">' + indicatorsHtml + '</ol>' +
+          '<div class="carousel-inner">' + slidesHtml + '</div>' +
+          '<a class="carousel-control-prev" href="#' + carouselId + '" data-slide="prev">' +
+          '<span class="carousel-control-prev-icon" aria-hidden="true"></span></a>' +
+          '<a class="carousel-control-next" href="#' + carouselId + '" data-slide="next">' +
+          '<span class="carousel-control-next-icon" aria-hidden="true"></span></a>' +
+          '</div>' +
+          linksHtml +
+          '</div>' +
+          '</div>' +
+          '</div>';
+        modalsContainer.appendChild(modal);
+      });
+    }
+
+    renderCompetitions();
+  </script>
+
   <script src="js/main.js"></script>
 
 </body>

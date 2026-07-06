@@ -26,8 +26,42 @@
         }
 
         .card{
-            background-color: lightgray;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
             margin-bottom: 25px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover{
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+        }
+
+        .card-img-top{
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 18px auto 0;
+            border: 3px solid #f0f0f0;
+        }
+
+        .card-body{
+            padding: 0.9rem;
+        }
+
+        .card-title{
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-text{
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
         }
 
     </style>
@@ -60,7 +94,7 @@
                     <a class="nav-link" href="index.html">home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="projects.html">projects</a>
+                    <a class="nav-link" href="projects.html">projects and competitions</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="achievements.html">achievements</a>
@@ -92,9 +126,9 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
 
-                <div class="col-md-4 filterDiv alumni">
+                <div class="col-md-3 filterDiv alumni">
                     <div class="card">
                         <img src="./team/pp.jpg" class="card-img-top" alt="Aditya Agarwal">
                         <div class="card-body">
@@ -104,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni">
+                <div class="col-md-3 filterDiv alumni">
                     <div class="card">
                         <img src="./team/cb.jpg" class="card-img-top" alt="Founder, Alumnus">
                         <div class="card-body">
@@ -114,7 +148,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni software">
+                <div class="col-md-3 filterDiv alumni software">
                     <div class="card">
                         <img src="./team/avr.jpg" class="card-img-top" alt="Avinash Ruchandani">
                         <div class="card-body">
@@ -124,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni">
+                <div class="col-md-3 filterDiv alumni">
                     <div class="card">
                         <img src="./team/githin.jpg" class="card-img-top" alt="Githin John">
                         <div class="card-body">
@@ -134,7 +168,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni">
+                <div class="col-md-3 filterDiv alumni">
                     <div class="card">
                         <img src="./team/mrinal.jpg" class="card-img-top" alt="Mrinal Mohit">
                         <div class="card-body">
@@ -144,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni">
+                <div class="col-md-3 filterDiv alumni">
                     <div class="card">
                         <img src="./team/soumyadeep.jpg" class="card-img-top" alt="Soumyadeep Mukherjee">
                         <div class="card-body">
@@ -154,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni">
+                <div class="col-md-3 filterDiv alumni">
                     <div class="card">
                         <img src="./team/jit.jpg" class="card-img-top" alt="Jit Ray Chowdhury">
                         <div class="card-body">
@@ -164,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni controls">
+                <div class="col-md-3 filterDiv alumni controls">
                     <div class="card">
                         <img src="./team/prasann.jpg" class="card-img-top" alt="Prasann Jain">
                         <div class="card-body">
@@ -174,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni controls">
+                <div class="col-md-3 filterDiv alumni controls">
                     <div class="card">
                         <img src="./team/keshav.jpg" class="card-img-top" alt="Keshav Sarraf">
                         <div class="card-body">
@@ -184,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni software">
+                <div class="col-md-3 filterDiv alumni software">
                     <div class="card">
                         <img src="./team/sairam.jpg" class="card-img-top" alt="Sairam K">
                         <div class="card-body">
@@ -194,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni controls">
+                <div class="col-md-3 filterDiv alumni controls">
                     <div class="card">
                         <img src="./team/rishal.jpg" class="card-img-top" alt="Rishal Raj">
                         <div class="card-body">
@@ -204,7 +238,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni software">
+                <div class="col-md-3 filterDiv alumni software">
                     <div class="card">
                         <img src="./team/kk.jpg" class="card-img-top" alt="Kumar Krishna Agrawal">
                         <div class="card-body">
@@ -214,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni controls">
+                <div class="col-md-3 filterDiv alumni controls">
                     <div class="card">
                         <img src="./team/vishnu.jpg" class="card-img-top" alt="Vishnu Sharma">
                         <div class="card-body">
@@ -224,12 +258,242 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 filterDiv alumni controls">
+                <div class="col-md-3 filterDiv alumni controls">
                     <div class="card">
                         <img src="./team/gaurav.jpg" class="card-img-top" alt="Gaurav Gardi">
                         <div class="card-body">
                             <h5 class="card-title">Gaurav Gardi</h5>
                             <p class="card-text">Alumnus, Controls Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/manash.jpg" class="card-img-top" alt="Manash Pratim Das">
+                        <div class="card-body">
+                            <h5 class="card-title">Manash Pratim Das</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="http://manashpratim.in/" class="btn btn-primary">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/sourish.jpg" class="card-img-top" alt="Sourish Ghosh">
+                        <div class="card-body">
+                            <h5 class="card-title">Sourish Ghosh</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="http://sourishghosh.com/" class="btn btn-primary">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/ashwary.jpg" class="card-img-top" alt="Ashwary Anand">
+                        <div class="card-body">
+                            <h5 class="card-title">Ashwary Anand</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni controls">
+                    <div class="card">
+                        <img src="./team/aman.jpg" class="card-img-top" alt="Aman Chandra">
+                        <div class="card-body">
+                            <h5 class="card-title">Aman Chandra</h5>
+                            <p class="card-text">Alumnus, Controls Team</p>
+                            <a href="https://amanchandra333.github.io" class="btn btn-primary">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni controls">
+                    <div class="card">
+                        <img src="./team/amitPathak.jpg" class="card-img-top" alt="Amit Kumar Pathak">
+                        <div class="card-body">
+                            <h5 class="card-title">Amit Kumar Pathak</h5>
+                            <p class="card-text">Alumnus, Controls Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni controls">
+                    <div class="card">
+                        <img src="./team/kris.jpg" class="card-img-top" alt="Krishnakant Deshmukh">
+                        <div class="card-body">
+                            <h5 class="card-title">Krishnakant Deshmukh</h5>
+                            <p class="card-text">Alumnus, Controls Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni controls">
+                    <div class="card">
+                        <img src="./team/Shivang.jpg" class="card-img-top" alt="Shivang Agrawal">
+                        <div class="card-body">
+                            <h5 class="card-title">Shivang Agrawal</h5>
+                            <p class="card-text">Alumnus, Controls Team</p>
+                            <a href="http://shivangagrawal.in" class="btn btn-primary">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni controls">
+                    <div class="card">
+                        <img src="./team/vivek.jpg" class="card-img-top" alt="Vivek Mudgal">
+                        <div class="card-body">
+                            <h5 class="card-title">Vivek Mudgal</h5>
+                            <p class="card-text">Alumnus, Controls Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/Gaurav_Junior.jpg" class="card-img-top" alt="Gaurav Suryawanshi">
+                        <div class="card-body">
+                            <h5 class="card-title">Gaurav Suryawanshi</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni mechanical">
+                    <div class="card">
+                        <img src="./team/Akshay.jpg" class="card-img-top" alt="Akshay Jain">
+                        <div class="card-body">
+                            <h5 class="card-title">Akshay Jain</h5>
+                            <p class="card-text">Alumnus, Mechanical Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/akshat2.jpg" class="card-img-top" alt="Akshat Pandya">
+                        <div class="card-body">
+                            <h5 class="card-title">Akshat Pandya</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/manad.jpeg" class="card-img-top" alt="Manad Mishra">
+                        <div class="card-body">
+                            <h5 class="card-title">Manad Mishra</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni controls">
+                    <div class="card">
+                        <img src="./team/aditi.jpg" class="card-img-top" alt="Aditi Singh">
+                        <div class="card-body">
+                            <h5 class="card-title">Aditi Singh</h5>
+                            <p class="card-text">Alumnus, Controls Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/praneet.jpg" class="card-img-top" alt="Praneet jain">
+                        <div class="card-body">
+                            <h5 class="card-title">Praneet jain</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni mechanical embedded">
+                    <div class="card">
+                        <img src="./team/aman_modi.jpg" class="card-img-top" alt="Aman Modi">
+                        <div class="card-body">
+                            <h5 class="card-title">Aman Modi</h5>
+                            <p class="card-text">Alumnus, Mechanical and Embedded</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/anvee.jpg" class="card-img-top" alt="Anvee Naik">
+                        <div class="card-body">
+                            <h5 class="card-title">Anvee Naik</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/shubhika.jpg" class="card-img-top" alt="Shubhika Garg">
+                        <div class="card-body">
+                            <h5 class="card-title">Shubhika Garg</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/vidit.jpg" class="card-img-top" alt="Vidit Goel">
+                        <div class="card-body">
+                            <h5 class="card-title">Vidit Goel</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni controls">
+                    <div class="card">
+                        <img src="./team/PalakHarwani.jpg" class="card-img-top" alt="Palak Harwani">
+                        <div class="card-body">
+                            <h5 class="card-title">Palak Harwani</h5>
+                            <p class="card-text">Alumnus, Controls Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/aryan.jpg" class="card-img-top" alt="Aryan Jaiswal">
+                        <div class="card-body">
+                            <h5 class="card-title">Aryan Jaiswal</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/Biswajit.jpg" class="card-img-top" alt="Biswajit Ghosh">
+                        <div class="card-body">
+                            <h5 class="card-title">Biswajit Ghosh</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni perception">
+                    <div class="card">
+                        <img src="./team/Parakh.jpg" class="card-img-top" alt="Parakh Agarwal">
+                        <div class="card-body">
+                            <h5 class="card-title">Parakh Agarwal</h5>
+                            <p class="card-text">Alumnus, Perception Team</p>
+                            <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 filterDiv alumni mechanical embedded">
+                    <div class="card">
+                        <img src="./team/placeholder-person.jpg" class="card-img-top" alt="Abhinav Ukey">
+                        <div class="card-body">
+                            <h5 class="card-title">Abhinav Ukey</h5>
+                            <p class="card-text">Alumnus, Mechanical and Embedded</p>
                             <a href="#" class="btn btn-primary disabled" aria-disabled="true">Profile</a>
                         </div>
                     </div>
