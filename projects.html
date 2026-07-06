@@ -18,7 +18,7 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-  <title>aerial robotics kharagpur | projects</title>
+  <title>Aerial Robotics Kharagpur | projects</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" size="96x96" href="Design/favicon-96x96.png">
@@ -158,7 +158,7 @@
     <div class="bg-nav"></div>
     <a class="navbar-brand" href="index.html">
       <img src="Design/ark.png" class="d-inline-block align-middle headimage" alt="ark-logo" loading="lazy">
-      <span class="headfont">aerial robotics kharagpur</span>
+      <span class="headfont">Aerial Robotics Kharagpur</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -168,25 +168,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="projects.html">projects and competitions<span class="sr-only">(current)</span></a>
+          <a class="nav-link active" href="projects.html">Projects and Competitions<span class="sr-only">(current)</span></a>
         </li>
         <!-- <li class="nav-item">
                     <a class="nav-link" href="achievements.html">achievements</a>
                 </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="team.html">team</a>
+          <a class="nav-link" href="team.html">Team</a>
         </li>
 				<li class="nav-item">
-					<a class="nav-link" href="alumni.html">alumni</a>
+					<a class="nav-link" href="alumni.html">Alumni</a>
 				</li>
         <li class="nav-item">
-          <a class="nav-link" href="blog.html">blog</a>
+          <a class="nav-link" href="blog.html">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">contact us</a>
+          <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
       </ul>
     </div>
@@ -417,7 +417,10 @@
           "Design/competitions/interiit-lat/4.jpeg",
           "Design/competitions/interiit-lat/5.jpeg"
         ],
-        description: "<p>Inter IIT Tech Meet 14.0, LAT Aerospace problem statement.</p>",
+        description: "<p>The LAT Aerospace problem statement, part of Inter IIT Tech Meet 14.0, challenged teams to design a real-world aerospace solution for one of India's pressing regional connectivity gaps.</p>" +
+          "<p>We designed and developed a next-generation Short Take-Off and Landing (STOL) aircraft capable of operating from compact airfields while retaining efficient cruise performance. By combining a powered-lift configuration with hybrid-electric propulsion, we achieved a lift coefficient greater than 6.5, pushing the limits of low-speed aerodynamic efficiency.</p>" +
+          "<p>The concept was built to enable rapid, short-range regional travel across India, opening up access to smaller air-stops, cutting down travel time, and improving connectivity to remote areas, all while easing dependence on large airport infrastructure.</p>" +
+          "<p><strong>We won gold in this event, contributing to IIT Kharagpur's fifth consecutive overall gold at Inter IIT Tech Meet.</strong></p>",
         links: []
       },
       {
@@ -428,7 +431,9 @@
         images: [
           "Design/competitions/ideaforge-2024/1.jpeg"
         ],
-        description: "<p>Inter IIT Tech Meet 13.0, ideaForge problem statement.</p>",
+        description: "<p>The ideaForge problem statement at Inter IIT Tech Meet 13.0 challenged teams to design a fault-tolerant control system for a quadrotor, one capable of continuing safe flight after the failure of a single motor. The solution had to detect the failed motor, reconfigure the controller in real time, and safely complete critical operations such as hovering, landing, and Return-to-Home despite the actuator failure.</p>" +
+          "<p>We built a complete fault-tolerant flight control framework centered on a Model Reference Fault-Tolerant Controller (MRFTC), paired with a novel Apparent Force Divergence based motor failure detection algorithm. Rather than relying solely on IMU data, this approach rapidly identified the failed motor and switched from the default PX4 controller to a custom control allocator that redistributed thrust across the remaining motors. The system was validated extensively in PX4-Gazebo simulations and deployed on a Pixhawk 6C flight controller.</p>" +
+          "<p><strong>Competing against teams from IITs across the country, we won the Gold Medal in the High Prep category for the ideaForge problem statement, contributing to IIT Kharagpur's Overall Contingent Gold at Inter IIT Tech Meet 13.0.</strong></p>",
         links: [
           { url: "https://www.instagram.com/reel/DICCMt5SRZ8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" }
         ]
@@ -444,6 +449,19 @@
         description: "<p>The Boeing Aeromodelling Competition 2025 was a national aerospace engineering competition where student teams developed radio-controlled aircraft for precision payload delivery.</p>" +
           "<p>Held in Bengaluru, the 2025 challenge required teams to transport and accurately release payloads into designated target zones.</p>" +
           "<p><strong>Our team secured the Bronze Medal, finishing 3rd nationally.</strong></p>",
+        links: []
+      },
+      {
+        id: "imav-2019",
+        name: "International Micro Air Vehicle Competition (IMAV)",
+        year: "2019",
+        date: "2019-09-01",
+        images: [
+          "Design/competitions/imav-2019/1.jpg"
+        ],
+        description: "<p>The 11th International Micro Air Vehicle (IMAV) Competition and Conference is a premier international aerospace and aerial robotics competition that brings together university teams to develop innovative unmanned aerial systems for real-world applications.</p>" +
+          "<p>Held in Madrid, Spain, the 2019 challenge focused on smart logistics, requiring teams to develop drone-based solutions for autonomous indoor warehouse inventory management and navigation.</p>" +
+          "<p><strong>Competing against leading universities from around the world, Aerial Robotics Kharagpur became the first Indian team to win the IMAV Competition, securing 1st place globally.</strong></p>",
         links: []
       }
     ];
